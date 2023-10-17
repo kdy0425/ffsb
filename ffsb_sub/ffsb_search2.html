@@ -1,0 +1,582 @@
+<html lang="ko" class="ko modern"><!--<![endif]--><head>
+    <title>가족친화인증 신청 | 가족친화지원사업</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="가족친화제도를 모범적으로 운영하는 기업 및 공공기관에 대하여 심사를 통해 인증을 부여하는 제도">
+    <meta name="keywords" content="가족친화인증">
+    <!-- KaKao & Facebook 공유 링크 -->
+    <meta name="og:type" content="website">
+    <meta name="og:title" content="가족친화인증 신청 | 가족친화지원사업">
+    <meta name="og:url" content="">
+    <meta name="og:description" content="">
+    <meta name="og:image" content="http://www.ffsb.kr/common/img/common/sns_logo.png">
+    <meta name="og:article:author" content="다누리">
+    <!-- //KaKao & Facebook 공유 링크 -->
+    <!-- twitter 공유 링크 -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="가족친화인증 신청 | 가족친화지원사업">
+    <meta name="twitter:url" content="">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:image" content="http://www.ffsb.kr/common/img/common/sns_logo.png">
+    <!-- //트위터 공유 링크 -->
+            
+    <link type="text/css" rel="stylesheet" href="https://www.ffsb.kr/common/style/css/jquery-ui.css">
+    <link type="text/css" rel="stylesheet" href="https://www.ffsb.kr/common/style/css/ffm.css">
+    <link type="text/css" rel="stylesheet" href="https://www.ffsb.kr/common/style/css/ffm_m.css?ver=1"><!-- 반응형 css모음 -->
+    <!--[if lt IE 9]>
+      <script src="https://www.ffsb.kr/common/js/vender/respond.min.js"></script>
+    <![endif]-->
+    <script
+      src="https://code.jquery.com/jquery-1.12.4.js"
+      integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU="
+      crossorigin="anonymous"></script>
+    <script src="https://www.ffsb.kr/common/js/vender/jquery.easing.1.3.js"></script>
+    <script src="https://www.ffsb.kr/common/js/vender/placeholders.min.js"></script>
+    <script src="https://www.ffsb.kr/common/js/jquery-ui.min.js"></script>
+    <script src="https://www.ffsb.kr/common/js/common.js"></script>
+    <script src="https://www.ffsb.kr/common/js/ui.js"></script>
+    <script src="https://www.ffsb.kr/common/js/jquery.validate.js"></script>
+    <script src="https://www.ffsb.kr/ubireport/ajax/js4/ubiajax.js"></script>
+    <script type="text/javascript" src="https://www.eprivacy.or.kr/seal/mark.js"></script>
+    <script src="https://www.ffsb.kr/common/js/jquery.actual.min.js"></script><!-- 박스 그림자 효과 -->
+    <script src="https://www.ffsb.kr/common/js/mainDh.js"></script><!-- 화면 제이쿼리 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css">
+    </head>
+    <body>
+    <ul id="skip">
+        <li><a href="#content" onclick="document.getElementById('content').tabIndex = -1;document.getElementById('content').focus();return false;">본문 바로가기</a></li>
+        <li><a href="#sideBar" onclick="document.getElementById('sideBar').tabIndex = -1;document.getElementById('sideBar').focus();return false;">왼쪽 서브메뉴 바로가기</a></li>
+        <li><a href="#footer" onclick="document.getElementById('footer').tabIndex = -1;document.getElementById('footer').focus();return false;">하단 바로가기</a></li>
+    </ul>
+    <div id="wrap">
+    <div id="header">
+        <div class="containers1 one clearfix">
+            <h1 class="logo"><a href="/"><img src="https://www.ffsb.kr/common/img/common/h_logo.png" alt="가족친화지원사업 로고"></a></h1> <!-- 20190125 접근성 수정 -->
+            <div class="info-box">
+                <ul class="list">
+                    <li style="margin-top:5px">
+                        <span class="profileicob1"> 김윤미 (trionsoft) 님 환영합니다.  최종접속시간 : 2023-06-13 09:39:52 </span>
+                        <span id="time_count" style="margin-left:10px;">남은시간 59:27</span>
+                    </li>
+                    <li class="icon ic4"><a href="/login/logout.do">로그아웃</a></li>
+                    <li class="icon ic5"><a href="/mypage/compMemView.do">마이페이지</a></li>
+                </ul>
+            </div>
+        </div>
+          <div id="dialog-confirm" title="로그인 연장" style="display:none;">
+            <p>
+                <span class="ui-icon ui-icon-alert" style="float:left; margin:0 7px 20px 0;"></span>
+                <span id="confirm-msg"></span>
+            </p>
+        </div>
+        <div class="header__in">
+            <div class="navigation">
+                <div class="bar">
+                    <div class="containers1">
+                        <ul id="gnb" class="gnb clearfix gnb-ul float_wrap nav-menu nine_type">
+                            <li class="gnb-menu nav-item t_menu js-row0" style="width: 137.556px;"><a href="/ffm/ffmCertBusiGuide.do">가족친화사업</a>
+                                <div class="box sub-nav" style="height: 332px; display: none;">
+                                    <div class="inner sub-nav__box" style="height: 290px;">
+                                        <ul class="sub-nav__box__ul float_wrap">
+                                            <li class="sub-nav__box__list float_wrap">
+                                                <a href="/ffm/ffmCertBusiGuide.do">가족친화사업안내</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="gnb-menu nav-item t_menu js-row0" style="width: 137.556px;"><a href="/ffm/ffmCertSummary.do">가족친화인증</a>
+                                <div class="box sub-nav" style="height: 332px; display: none;">
+                                    <div class="inner sub-nav__box" style="height: 290px;">
+                                        <ul class="sub-nav__box__ul float_wrap">
+                                            <li class="sub-nav__box__list float_wrap"><a href="/ffm/ffmCertSummary.do"><span>인증제도안내</span></a></li>
+                                            <li class="sub-nav__box__list float_wrap"><a href="/ffm/ffmCertEstLaw.do"><span>평가배점기준</span></a></li>
+                                            <li class="sub-nav__box__list float_wrap"><a href="/ffm/ffmCertScoreSelfDiag1.do"><span>예상점수미리보기</span></a></li>
+                                            <li class="sub-nav__box__list float_wrap"><a href="/ffm/ffmPresentMain.do"><span>인증설명회신청</span></a></li>
+                                            <li class="sub-nav__box__list float_wrap"><a href="/ffm/ffmCertRqnGuide.do"><span>가족친화인증신청</span></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="gnb-menu2 nav-item t_menu js-row0" style="width: 103.556px;"><a href="/consulting/consultingPreGuide.do">컨설팅</a>
+                                <div class="box sub-nav" style="height: 332px; display: none;">
+                                    <div class="inner sub-nav__box" style="height: 290px;">
+                                        <ul class="sub-nav__box__ul float_wrap">
+                                            <li class="sub-nav__box__list float_wrap">
+                                                <a href="/consulting/consultingPreGuide.do"><span>컨설팅안내</span></a></li>
+                                            <li class="sub-nav__box__list float_wrap"><a href="/consulting/consultingPreGuide.do"><span>컨설팅신청</span></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="gnb-menu2 nav-item t_menu js-row0" style="width: 114.556px;"><a href="/education/educationGuide.do">직장교육</a>
+                                <div class="box sub-nav" style="height: 332px; display: none;">
+                                    <div class="inner sub-nav__box" style="height: 290px;">
+                                        <ul class="sub-nav__box__ul float_wrap">
+                                            <li class="sub-nav__box__list float_wrap">
+                                                <a href="/education/educationGuide.do"><span>직장교육안내</span></a></li>
+                                            <li class="sub-nav__box__list float_wrap">
+                                                <a href="/education/onlineEducationRqn.do"><span>직장교육신청</span></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="gnb-menu2 nav-item t_menu js-row0" style="width: 114.556px;"><a href="/selfChk/selfChkGuide.do">자체점검</a>
+                                <div class="box sub-nav" style="height: 332px; display: none;">
+                                    <div class="inner sub-nav__box" style="height: 290px;">
+                                        <ul class="sub-nav__box__ul float_wrap">
+                                            <li class="sub-nav__box__list float_wrap"><a href="/selfChk/selfChkGuide.do"><span>자체점검안내</span></a></li>
+                                            <li class="sub-nav__box__list float_wrap"><a href="/selfChk/selfChkGuide.do"><span>자체점검등록</span></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="gnb-menu nav-item t_menu js-row0" style="width: 137.556px;"><a href="/forum/forumApplyList.do">포럼 및 네트워크</a>
+                                <div class="box sub-nav" style="height: 332px; display: none;">
+                                    <div class="inner sub-nav__box" style="height: 290px;">
+                                        <ul class="sub-nav__box__ul float_wrap">
+                                            <li class="sub-nav__box__list float_wrap">
+                                                <a href="/forum/forumApplyList.do"><span>가족친화 포럼 및 네트워크 안내</span></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="gnb-menu nav-item t_menu js-row0" style="width: 143.556px;"><a href="/media/list.do">가족친화정책 홍보</a>
+                                <div class="box sub-nav" style="height: 332px; display: none;">
+                                    <div class="inner sub-nav__box" style="height: 290px;">
+                                        <ul class="sub-nav__box__ul float_wrap">
+                                            <li class="sub-nav__box__list float_wrap">
+                                                <a href="/media/list.do"><span>가족친화정책 홍보</span></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="gnb-menu nav-item t_menu js-row0" style="width: 125.556px;"><a href="/information/incentive1.do">정보마당</a>
+                                <div class="box sub-nav" style="height: 332px; display: none;">
+                                    <div class="inner sub-nav__box" style="height: 290px;">
+                                        <ul class="sub-nav__box__ul float_wrap">
+                                            <li class="sub-nav__box__list float_wrap">
+                                                <a href="/information/incentive1.do"><span>인증기업인센티브</span></a>
+                                            </li>
+                                            <li class="sub-nav__box__list float_wrap">
+                                                <a href="/ffsbbod/bs/boardList.do?boardSeq=4"><span>자료실</span></a>
+                                                <ul class="child-nav__box__ul float_wrap">
+                                                    <li class="child-nav__box__list float_wrap">
+                                                        <a href="/ffsbbod/bs/boardList.do?boardSeq=4">- 일반자료</a>
+                                                    </li>
+                                                    <li class="child-nav__box__list float_wrap">
+                                                        <a href="/ffsbbod/bs/boardList.do?boardSeq=5">- 홍보자료</a>
+                                                    </li>
+                                                    <li class="child-nav__box__list float_wrap">
+                                                        <a href="/ffsbbod/bs/boardList.do?boardSeq=2">- 인증기업 우수사례</a>
+                                                    </li>
+                                                    <li class="child-nav__box__list float_wrap">
+                                                        <a href="/ffsbbod/bs/boardList.do?boardSeq=6">- 포럼자료실</a>
+                                                    </li>
+                                                    <li class="child-nav__box__list float_wrap">
+                                                        <a href="/ffsbbod/bs/boardList.do?boardSeq=14">- 콘텐츠 자료실</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="gnb-menu nav-item t_menu js-row1" style="width: 125.556px;"><a href="/ffsbbod/bs/boardList.do?boardSeq=1">고객마당</a>
+                                <div class="box sub-nav" style="height: 170px; display: none;">
+                                    <div class="inner sub-nav__box" style="height: 128px;">
+                                        <ul class="sub-nav__box__ul float_wrap">
+                                            <li class="sub-nav__box__list float_wrap">
+                                                <a href="/ffsbbod/bs/boardList.do?boardSeq=1"><span>공지사항</span></a></li>
+                                            <li class="sub-nav__box__list float_wrap">
+                                                <a href="/ffsbbod/bs/boardList.do?boardSeq=8"><span>자주하는질문</span></a></li>
+                                            <li class="sub-nav__box__list float_wrap">
+                                                <a href="/ffsbbod/bs/boardList.do?boardSeq=18"><span>인증신고게시판</span></a></li>
+                                            <li class="sub-nav__box__list float_wrap">
+                                                <a href="/customer/location1.do"><span>찾아오시는길</span></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div><!-- -->
+                <!-- 모바일 메뉴 -->
+                <div class="mobile_top_nav mobile_nav_bg">
+                    <div class="mobile_icon">
+                        <!-- <a href="#gnb_nav_mobile" class="m_open_btn mobile_on_off"><img src="https://www.ffsb.kr/common/img/common/menu_open.png" alt="메뉴보기" /></a> -->
+                        <a href="#gnb_nav_mobile" class="m_open_btn mobile_on_off"><span></span><span></span><span></span></a>
+                        <!-- <a href="#" class="m_s_btn"><img src="commons/images/mobile/menu_search.png" alt="검색" /></a> -->
+                    </div>
+                    <div class="mobile_top_nav__in">
+                        <nav id="gnb_nav_mobile">
+                            <h2 class="hidden_word">menu</h2>
+                            <ul class="gnb clearfix gnb-ul float_wrap nav-menu nine_type"><!-- .selected 클래스 있어야 메뉴가 펼쳐진 상태 -->
+                                <!-- 2022-05-25 메뉴 수정 -->
+                                <li class="gnb-menu nav-item t_menu selected"><a href="#">전체 메뉴</a>
+                                    <div class="sub-nav"><!-- .selected 클래스 있어야 메뉴가 펼쳐진 상태 -->
+                                        <div class="sub-nav__box">
+                                            <ul class="sub-nav__box__ul float_wrap">
+                                                <li class="sub-nav__box__list float_wrap"><a href="/ffm/ffmCertSummary.do"><span>가족친화인증 안내</span></a></li>
+                                                <li class="sub-nav__box__list float_wrap"><a href="/selfChk/selfChkGuide.do"><span>가족친화인증 자체점검</span></a></li>
+                                                <li class="sub-nav__box__list float_wrap"><a href="/consulting/consultingPreGuide.do"><span>컨설팅 안내</span></a></li>
+                                                <li class="sub-nav__box__list float_wrap"><a href="/education/educationGuide.do"><span>직장교육 안내</span></a></li>
+                                                <li class="sub-nav__box__list float_wrap"><a href="/ffsbbod/bs/boardList.do?boardSeq=4"><span>일반자료</span></a></li>
+                                                <li class="sub-nav__box__list float_wrap"><a href="/ffsbbod/bs/boardList.do?boardSeq=5"><span>홍보자료</span></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <span class="mobile-close mobile_on_off"><a href="javascript:;">닫기</a></span>
+                <script>
+                    /* 모바일 메뉴 오픈 */
+                    function mobile_menu() {
+                        jQuery('.mobile_on_off').on('click',function(){
+                            jQuery('body').toggleClass('mobile_menu_open');
+                            jQuery('#gnb_nav_mobile').toggleClass('selected');
+                            jQuery('.mobile_top_nav').toggleClass('selected');
+                            jQuery('.mobile_icon').toggleClass('selected');
+                            jQuery('.mobile_top_nav .gnb').toggleClass('selected');
+                            jQuery('.top-nav').toggleClass('selected');
+                            return false;
+                        });
+                        return false;
+                    }
+                    mobile_menu();
+                    function mobile_tc(){
+                    $('#gnb_nav_mobile li.taphover').on("touchstart", function (e) {
+                        "use strict"; //satisfy the code inspectors
+                        var link = $(this); //preselect the link
+                        if (link.hasClass('selected')) {
+                            return true;
+                        } else {
+                            link.addClass("selected");
+                            $('#gnb_nav_mobile li.taphover').not(this).removeClass("selected");
+                            e.preventDefault();
+                            return false; //extra, and to make sure the function has consistent return points
+                        }
+                    });
+                    }
+                    (function(window, document, $) {
+                        })(window, document, jQuery);
+                        if(navigator.userAgent.match(/Android|Mobile|iP(hone|od|ad)|BlackBerry|IEMobile|Kindle|NetFront|Silk-Accelerated|(hpw|web)OS|Fennec|Minimo|Opera M(obi|ini)|Blazer|Dolfin|Dolphin|Skyfire|Zune/)){
+                        //   mobile_tc(); //모바일(스마트폰+태블릿)일 때 실행 될 스크립트
+                        }
+                        function mainGnbMobile() {
+                                var oldIndex = 0;
+                                jQuery('.mobile_top_nav li.gnb-menu').click(function() {
+                                    var thisIndex = jQuery('.mobile_top_nav li.gnb-menu').index(this);
+                                    jQuery('.mobile_top_nav div.sub-nav').removeClass('selected');
+                                    jQuery('.mobile_top_nav li.gnb-menu').removeClass('selected');
+                                    jQuery('.mobile_top_nav li.gnb-menu').removeClass('on');
+                                    jQuery('.mobile_top_nav div.sub-nav').eq(thisIndex).addClass('selected');
+                                    jQuery('.mobile_top_nav li.gnb-menu').eq(thisIndex).addClass('selected');
+                                    //return false;
+                                });
+                        };
+                        mainGnbMobile();
+                    $(document).ready(function() {
+                            /**/
+                            function gnb_type(){
+                                var gnbli = jQuery('#gnb.gnb-ul > li').length;
+                                if ( gnbli == 5) {
+                                    jQuery('.gnb').addClass('five_type');
+                                } else if ( gnbli == 2){
+                                    jQuery('.gnb').addClass('two_type');
+                                } else if ( gnbli == 3){
+                                    jQuery('.gnb').addClass('three_type');
+                                } else if ( gnbli == 4){
+                                    jQuery('.gnb').addClass('four_type');
+                                } else if ( gnbli == 7){
+                                    jQuery('.gnb').addClass('seven_type');
+                                } else if ( gnbli == 8){
+                                    jQuery('.gnb').addClass('eight_type');
+                                } else if ( gnbli == 9){
+                                    jQuery('.gnb').addClass('nine_type');
+                                } else if ( gnbli == 10){
+                                    jQuery('.gnb').addClass('ten_type');
+                                } else if ( gnbli == 11){
+                                    jQuery('.gnb').addClass('eleven_type');
+                                } else {
+                                    jQuery('.gnb').addClass('six_type');
+                                }
+                            }
+                            gnb_type();
+                    });
+                </script>
+        </div>
+    </div><!-- end #header -->
+    <script type="text/javascript" src="https://wcs.naver.net/wcslog.js"></script>
+    <script type="text/javascript">
+        if(!wcs_add) var wcs_add = {}; wcs_add["wa"] = "211ae0bad54580"; wcs_do();
+    </script>
+        <!-- // 상단헤더 -->
+        <div id="container" class="pts40">	
+            <!-- contentWrap -->
+            
+    <div id="twoColWrap" class="clearfix">
+    <!-- start #sideBar -->
+    <div id="sideBar">
+        <div class="heading">
+            <h2 class="tit">통합검색</h2>
+            <img src="./icon_lnb_search.png" alt="" class="icon">
+        </div>
+        
+    </div>
+    <!-- end #sideBar -->
+        <div id="content">
+            <div class="inner">
+                <p class="locations">
+                    <span class="home">Home</span>
+                    <span class="entity">&gt;</span>
+                    <strong>통합검색</strong>
+                </p>
+    
+                <h1 class="titles1">통합검색</h1>
+
+                <div class="search_form">
+                    <form action="">
+                        <input type="text" id="search_input" value="사업">
+                        <button type="button" id="search_submit">검색</button>
+                    </form>
+                </div>
+
+                <ul class="tabs5">
+                    <li><a href="javascript:;">통합검색 (6)</a></li>
+                    <li><a href="javascript:;">메뉴검색 (2)</a></li>
+                    <li><a href="javascript:;">인증기업·기관 (1)</a></li>
+                    <li><a href="javascript:;" class="on">알림소식 (3)</a></li>
+                    <li><a href="javascript:;">소통참여 (0)</a></li>
+                </ul>
+
+                <div class="search_result">
+                    <div class="title">알림소식 <span class="count">[결과검색 3건]</span></div>
+                    <div class="cnt">
+                        <div class="link_items">
+                            <div class="item">
+                                <a href="javascript:;">가족친화<strong>사업</strong>홈페이지 사용자 만족도 조사</a>
+                                <div class="lct">홈 > 알림소식 > 공지사항</div>
+                            </div>
+                            <div class="item">
+                                <a href="javascript:;">2021년 가족친화지원<strong>사업</strong> 다행뉴스 11월호(vol.71) 이벤트</a>
+                                <div class="lct">홈 > 알림소식 > 자료실</div>
+                            </div>
+                            <div class="item">
+                                <a href="javascript:;">가족친화지원<strong>사업</strong> 홈페이지 일시중단 안내 (3.13, 3.26~27)</a>
+                                <div class="lct">홈 > 알림소식 > 공지사항</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p class="pagings1">
+                        <a href="javascript:fnGoPage('1', '')" class="first">처음으로</a> <a href="javascript:fnGoPage('1', '')" class="prev">이전 10개</a> <span class="num"><a href="#" class="on">1</a><a href="javascript:fnGoPage('2', '')">2</a><a href="javascript:fnGoPage('3', '')">3</a><a href="javascript:fnGoPage('4', '')">4</a><a href="javascript:fnGoPage('5', '')">5</a><a href="javascript:fnGoPage('6', '')">6</a><a href="javascript:fnGoPage('7', '')">7</a></span> <a href="javascript:fnGoPage('7', '')" class="next">다음 10개</a> <a href="javascript:fnGoPage('7', '')" class="last">끝으로</a>
+                    </p>
+                </div>
+    
+            </div><!-- end .inner -->
+        </div><!-- end #content -->
+    </div>
+    
+    <style>
+    .search_form{background-color: #F1F2F3;padding:25px;margin-top:30px;}
+    .search_form form{display:flex;justify-content: center;align-items: center;}
+    .search_form #search_input{width:305px;height:34px;border:0;padding-left:10px;color:#606060;font-size:14px;border:1px solid #ccc;}
+    .search_form #search_submit{border:0;background-color: #515B6C;width:80px;height:30px;color:#fff;font-size:14px;font-weight: 700;margin-left:9px;transition: all 300ms ease;cursor:pointer;}
+    .search_form #search_submit:hover{background-color:#303b52;}
+    .tabs5{display:flex;}
+    .tabs5 li{flex:1 1;}
+    .tabs5 li a{display:block;text-align:center;padding:16px 5px;color:#333;font-size:15px;border-top:1px solid #ddd;border-left:1px solid #ddd;border-bottom:1px solid #464D5D;}
+    .tabs5 li a.on{border:1px solid #464D5D;border-bottom:1px solid #fff;font-weight:700;}
+    .tabs5 li + li a{}
+    .tabs5 li:last-child a{border-right:1px solid #ddd;}
+    .tabs5 li:last-child a.on{border-right:1px solid #464D5D;}
+
+    .search_form + .tabs5{margin-top:30px;}
+    .tabs5 + .search_result{margin-top:50px;}
+    .result_cont{color:#333;font-size:22px;font-weight:700;margin-bottom:35px;}
+    .result_cont strong{color:#EE3F3F;font-weight:700;}
+    .search_result{}
+    .search_result .result_box{padding:35px 0;border-top:1px solid #E4E7E9;}
+    .search_result .result_box:last-child{border-bottom:1px solid #E4E7E9;}
+    .search_result .title{margin-bottom:20px;color:#333;font-size:20px;font-weight:700;padding-left:27px;background-position: left center;background-repeat: no-repeat;background-image: url("data:image/svg+xml,%3Csvg width='19' height='19' viewBox='0 0 19 19' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='19' height='19' rx='1' fill='%23627492'/%3E%3Cpath d='M7.60002 13.3L11.4 9.5L7.60002 5.7' stroke='white' stroke-width='2.5'/%3E%3C/svg%3E%0A");}
+    .search_result .title .count{color:#EE3F3F;font-size:15px;font-weight:400;display:inline-block;margin-left:2px;}
+    .search_result .result_box .cnt{}
+    .search_result .link_items{}
+    .search_result .link_items .item{position: relative;padding-left:13px;}
+    .search_result .link_items .item:before{content:"";width:5px;height:5px;background-color: #837CBC;border-radius: 50%;position:absolute;left:0;top:6px;}
+    .search_result .link_items .item + .item{margin-top:12px;}
+    .search_result .link_items .item a{color:#3333CC;font-size:15px;text-decoration: underline;}
+    .search_result .link_items .item a strong{font-weight:800;}
+    .search_result .link_items .item a:hover{color:#2121a5;}
+    .search_result .link_items .item .lct{margin-top:5px;color:#333;font-size:13px;}
+    .search_result .result_box .result_more{margin-top:35px;text-align: right;}
+    .search_result .result_box .result_more a{display:inline-block;bordeR:1px solid #ccc;font-size:12px;font-weight:700;border-radius:2px;color:#555;padding:7px 20px;}
+    .search_result .result_box .result_more a:hover{text-decoration: underline;}
+    .search_result .result_box .empty{position: relative;padding-left:13px;font-size:15px;color:#333;}
+    .search_result .result_box .empty:before{content:"";width:5px;height:5px;background-color: #837CBC;border-radius: 50%;position:absolute;left:0;top:6px;}
+    .search_result .pagings1{margin-top:100px;}
+
+    @media (max-width: 768px) {
+        .search_form{margin-top:30px;}
+        .search_form #search_input{width:1%;flex:1 1 auto;}
+        .tabs5{display:flex;flex-wrap:wrap;}
+        .tabs5 li{width:33.333%;flex:none;}
+        .tabs5 li a{padding:10px 5px;font-size:13px;border:0;border-bottom:1px solid #ddd;border-top:1px solid #ddd;border-right:1px solid #ddd;display: flex;height:100%;box-sizing: border-box;justify-content: center;align-items: center;}
+        .tabs5 li a.on{background-color:#464D5D;color:#fff;border:1px solid #464D5D;}
+        .tabs5 li + li a{}
+        .tabs5 li:nth-child(3n) a{border-right:1px solid #ddd;}
+        .tabs5 li:nth-child(n+4) a{border-top:0;}
+        .tabs5 li:first-child a,
+        .tabs5 li:nth-child(3n + 1) a{border-left:1px solid #ddd;}
+        .tabs5 li:last-child a{border-right:1px solid #ddd;}
+
+        .search_form + .tabs5{margin-top:20px;}
+        .tabs5 + .search_result{margin-top:35px;}
+        .result_cont{font-size:18px;margin-bottom:25px;word-break: keep-all;}
+        .search_result .result_box{padding:25px 0;}
+        .search_result .title{margin-bottom:15px;font-size:16px;padding-left:22px;background-size:14px;}
+        .search_result .title .count{font-size:13px;}
+        .search_result .link_items .item a{font-size:14px;}
+        .search_result .result_box .result_more{margin-top:25px;}
+        .search_result .result_box .empty{font-size:14px;}
+        .search_result .result_box .result_more a{padding:7px 15px;}
+        .search_result .pagings1{margin-top:50px;}
+    }
+    </style>
+   
+    <div id="quick" class="js-trans sticky" style="top: 0px;">			
+        <p class="btn"><a href="#">QUICK MENU</a></p>
+        <div class="quicks">
+            <h2 class="tit">QUICK<br>MENU</h2>				
+            <ul class="list">
+                <li class="ic1"><a href="http://www.ffsb.kr/ffm/ffmCertSummary.do">인증제도<br>안내</a></li>
+                <li class="ic2"><a href="http://www.ffsb.kr/ffm/ffmCertEstLaw.do">평가배점<br>기준</a></li>
+                <li class="ic3"><a href="http://www.ffsb.kr/ffm/ffmCertRqnGuide.do">가족친화인증<br>신청</a></li>
+                <li class="ic4"><a href="http://www.ffsb.kr/ffm/ffmPresentMain.do">설명회신청</a></li>
+                <li class="ic5"><a href="http://www.ffsb.kr/information/incentive1.do">인증기업<br>혜택</a></li>
+                <li class="ic6"><a href="https://www.ffsb.kr/information/incentive2.do">출입국<br>우대카드</a></li>
+                <li class="ic7"><a href="https://www.ffsb.kr/ffsbbod/nl/boardList.do?boardSeq=13">뉴스레터</a></li>
+            </ul>
+            <p class="top js-quick-top"><a href="#top"><img src="https://www.ffsb.kr/common/img/common/btn_top.png" alt="맨위로"></a></p>
+        </div>
+    </div>	
+        </div><!-- end #container -->
+        
+        <!-- 풋터 -->
+        
+    <!-- 날짜				작업자		내용  -->
+    <!-- 2022.05.24		이다혜		인증마크 a태그 추가  -->
+    <div id="footer"> 
+        <div class="inner">
+            <div class="containers1">
+                <div class="inner clearfix">
+                    <div class="col one clearfix">
+                        <p><img src="https://www.ffsb.kr/common/img/common/logo1.png" alt="여성가족부"></p>
+                        <p><img src="https://www.ffsb.kr/common/img/common/logo4.png" alt="한국건강가정진흥원"></p>
+                        <p><img src="https://www.ffsb.kr/common/img/common/logo3.png" alt="한국경영인증원"></p>
+                    </div>
+                    <div class="col two">			
+                        <ul class="list clearfix"> 
+                            <li><a href="http://www.ffsb.kr/rule/termsUse.do">이용약관</a></li>
+                            <li><a href="http://www.ffsb.kr/rule/privacy.do?v=6" class="em">개인정보처리방침</a></li>
+                            <li><a href="http://www.ffsb.kr/customer/location1.do">찾아오시는길</a></li>
+                        </ul>
+                        <address>
+                            <span class="addr" style="margin-bottom: 7px;">서울특별시 중구 퇴계로 173(충무로3가, 남산스퀘어)21층, 24층</span>
+                            · 가족친화인증심사 : 한국경영인증원 가족친화인증사무국(02-6309-9084,9042)<br>
+                            · 가족친화컨설팅 : 한국건강가정진흥원 가족친화서비스부(02-3479-7673,7675)<br>
+                            · 가족친화직장교육 : 한국건강가정진흥원 가족친화서비스부(02-3479-7674)<br>
+                        </address>
+                        <p class="copyright">Copyright ⓒ KOREA INSTITUTE FOR HEALTHY FAMILY. All Rights Reserved</p>
+                    </div>
+                    <div class="col three">
+                        <select class="ss1 js-family-select" title="패밀리 사이트(새창열림)" style="display: none;">
+                            <option value="" selected="selected">패밀리 사이트</option>	
+                            <option value="http://www.mogef.go.kr/">여성가족부</option>				
+                            <option value="http://www.kihf.or.kr/">한국건강가정진흥원</option>
+                            <option value="http://www.ikmr.co.kr/">한국경영인증원</option>			
+                            <!-- <option value="http://www.kmar.co.kr/">한국경영인증원</option> -->
+                        </select><div class="ss1 js-family-select sbholder" style="width: 178px; display: inline-block;"><a href="#" class="selected">패밀리 사이트</a><a href="#" class="btn">열기</a><ul class="list" style="width: 178px; display: none;"><li style="display: none;"><a href="#" class="on" data-value="">패밀리 사이트</a></li><li><a href="#" data-value="http://www.mogef.go.kr/">여성가족부</a></li><li><a href="#" data-value="http://www.kihf.or.kr/">한국건강가정진흥원</a></li><li><a href="#" data-value="http://www.ikmr.co.kr/">한국경영인증원</a></li></ul></div>
+                        <button type="button" class="btns btn-family" title="새 창으로 이동">이동</button>
+                    </div>
+                    
+                    <!-- 인증마크 -->
+                    <div class="award-banner">
+                        <a href="http://www.webwatch.or.kr/Situation/WA_Situation.html?MenuCD=110" target="_blank">
+                            <img src="https://www.ffsb.kr/common/img/common/foot_ban_wia.png" alt="과학기술정보통신부 WEB ACCESSIBILITY 마크(웹 접근성 품질인증 마크)" title="국가 공인 인증기관 : 웹와치" style="vertical-align: middle">
+                        </a>
+                        <!-- <img src="https://www.eprivacy.or.kr/seal/mark_e.gif"style="cursor:pointer;"onclick="markPopupE('2019-N002')" alt="개인정보보호협회 인증서 보기 e PRIVACY"/> -->
+                        <a href="https://www.eprivacy.or.kr/front/certifiedSiteMark/certifiedSiteMarkPopup.do?certCmd=E&amp;certNum=2022-E-R064" onclick="window.open(this.href,'seal','width=527,height=720,location=no,status=no,scrollbars=no'); return false;" target="_blank" title="새 창 알림(eprivacy 인증서)"><img src="https://www.eprivacy.or.kr/images/mng/sub/mark1_eprivacy.png" style="cursor:pointer;" alt="개인정보보호협회 인증서 보기 e PRIVACY" title="eprivacy 인증서"></a>
+                    </div>
+                    <!-- //인증마크 -->
+                </div>
+            </div>
+        </div>
+    </div><!-- end footer -->
+    <!-- 
+    <script type="text/javascript" src="https://wcs.naver.net/wcslog.js"></script>
+    <script type="text/javascript">
+        if(!wcs_add) var wcs_add = {}; wcs_add["wa"] = "211ae0bad54580"; wcs_do();
+    </script>
+     -->
+        <!-- // 풋터 -->
+        
+        <!-- SNS공유 팝업 -->
+        <div class="pops1 js-pop-sns dns">
+            <div class="pop-wrap">
+                <div class="heading">
+                    <div class="inner">
+                        <h2 class="tit">공유하기</h2>
+                    </div>
+                </div>
+                <div class="cont">
+                    <div class="inner">
+                        
+                        <div class="group bbs2 pbs30">
+                            
+                            <ul class="sns_wrap mts10">
+                                <li>
+                                    <a href="#" onclick="javascript:fnFacebook('가족친화인증 신청 | 가족친화지원사업', '');return false;">
+                                        <img src="https://www.ffsb.kr/common/img/common/icon_facebook2.gif" alt="페이스북 공유하기(새창)">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" onclick="javascript:fnTwitter('가족친화인증 신청 | 가족친화지원사업', '');return false;">
+                                        <img src="https://www.ffsb.kr/common/img/common/icon_twitter2.gif" alt="트위터 공유하기(새창)">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" onclick="javascript:fnNaverBlog('가족친화인증 신청 | 가족친화지원사업', '');return false;">
+                                        <img src="https://www.ffsb.kr/common/img/common/icon_blog2.gif" alt="네이버블로그 공유하기(새창)">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" onclick="javascript:fnNaverBand('가족친화인증 신청 | 가족친화지원사업', '');return false;">
+                                        <img src="https://www.ffsb.kr/common/img/common/icon_band2.gif" alt="네이버밴드 공유하기(새창)">
+                                    </a>
+                                </li>
+                            </ul>
+                            
+                        </div>
+                        
+                        <div class="mts20 acs">
+                            <a class="btns a sz1 bc3 bolds js-close" style="width: 100px;" href="#">닫기</a>
+                        </div>
+                        
+                    </div>
+                </div>
+                <p class="close"><a href="#" class="js-close">닫기</a></p>
+            </div>
+        </div>
+        <!-- //SNS공유 팝업 -->
+        
+    </div>
+    <div id="ui-datepicker-div" class="ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all"></div></body></html>
