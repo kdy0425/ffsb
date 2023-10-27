@@ -93,3 +93,43 @@ $('.to_top').click(function(){
 	$('html, body').animate({scrollTop:0}, 'slow');
 	return false;
 });
+
+
+$(document).ready(function () {
+    // 스크롤 이벤트
+    $(window).scroll(function () {
+      var scrollPos = $(window).scrollTop();
+      var windowHeight = $(window).height();
+      var scrollThreshold = windowHeight / 3; // 화면 높이의 1/3
+
+      $('.item a').removeClass('active');
+
+      $('.item a').each(function () {
+        var targetId = $(this).data('rel');
+        var targetElement = $('#' + targetId);
+        if (targetElement.length > 0) {
+            var targetOffset = targetElement.offset().top;
+            // 이후의 코드
+          } else {
+            console.error("Element with ID '" + targetId + "' not found.");
+          }
+
+        if (scrollPos + scrollThreshold >= targetOffset && scrollPos - scrollThreshold < targetOffset) {
+          $(this).addClass('active');
+        }
+      });
+    });
+
+    // 클릭 이벤트
+    $('.item a').click(function () {
+      var targetId = $(this).data('rel');
+      var targetOffset = $('#' + targetId).offset().top;
+
+      $('html, body').animate(
+        {
+          scrollTop: targetOffset,
+        },
+        500 // 스무스 스크롤 시간 (밀리초 단위)
+      );
+    });
+  });

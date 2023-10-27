@@ -477,378 +477,403 @@
 
 	<!-- content -->
     <div id="content" class="main_content">
-        <div class="main_visual">
-            <div class="mv_inner">
-                <div class="mv_item">
-                    <div class="mv_cnt" style="background-image: url('../../assets/images/main_visual_item1.png');">
-                        <div class="title">가족친화 <strong>우수사례</strong></div>
-                        <div class="text">일과 생활의 균형, 가족친화경영을 선도하는 가족친화 우수기업 카드뉴스 발간</div>
-                        <a href="javascript:;" class="btn_detail"><span>자세히보기</span></a>
-                    </div>
-                </div>
-                <div class="mv_item">
-                    <div class="mv_cnt" style="background-image: url('../../assets/images/main_visual_item1.png');">
-                        <div class="title">가족친화 <strong>우수사례222</strong></div>
-                        <div class="text">일과 생활의 균형, 가족친화경영을 선도하는 가족친화 우수기업 카드뉴스 발간</div>
-                        <a href="javascript:;" class="btn_detail"><span>자세히보기</span></a>
-                    </div>
-                </div>
-                <div class="mv_item">
-                    <div class="mv_cnt" style="background-image: url('../../assets/images/main_visual_item1.png');">
-                        <div class="title">가족친화 <strong>우수사례333</strong></div>
-                        <div class="text">일과 생활의 균형, 가족친화경영을 선도하는 가족친화 우수기업 카드뉴스 발간</div>
-                        <a href="javascript:;" class="btn_detail"><span>자세히보기</span></a>
-                    </div>
-                </div>
-            </div>
-            <div class="paging_info">
-                <span class="now"></span><div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div><span class="total"></span>
-            </div>
-            <script>
-                //메인상단배너
-                $(document).ready(function(){
-                    var $statusNow = $('.main_visual .paging_info .now');
-                    var $statusTotal = $('.main_visual .paging_info .total');
-                    var $slickElement = $('.main_visual .mv_inner');
-                    var $progressBar = $('.progress');
-                    var $progressBarSet = $slickElement.find('.mv_item').length;
-                    var $progressBarSetWid = ( (1) / ($progressBarSet) ) * 100;
-
-                    $progressBar
-                        .css('background-size', $progressBarSetWid + '% 100%')
-                        .attr('aria-valuenow', $progressBarSetWid );
-
-                    $slickElement.on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
-                    var i = (currentSlide ? currentSlide : 0) + 1;
-                    $statusNow.text(i);
-                    if(i < 10){
-                        $statusNow.text('0' + i);
-                    }else{
-                        $statusNow.text(i);
-                    }
-                    if(slick.slideCount < 10){
-                        $statusTotal.text('0' + slick.slideCount);
-                    }else{
-                        $statusTotal.text(slick.slideCount);
-                    }
-                    });
-
-                    $slickElement.on('beforeChange', function(event, slick, currentSlide, nextSlide) {   
-                        var calc = ( (nextSlide) / (slick.slideCount-1) ) * 100;
-
-                        $progressBar
-                        .css('background-size', calc + '% 100%')
-                        .attr('aria-valuenow', calc );
-                    });
-
-                    $slickElement.on('beforeChange', function(event, slick, currentSlide, nextSlide) {   
-                        var calc = ( (nextSlide+1) / (slick.slideCount) ) * 100;
-                        $progressBar
-                        .css('background-size', calc + '% 100%')
-                        .attr('aria-valuenow', calc );
-                    });
-
-                    $slickElement.slick({
-                        autoplay: true,
-                        arrows: true
-                    });
-                });
-                //메인상단배너 끝
-            </script>
-        </div>
-
-        <div class="main_quick">
-            <div class="container">
-                <h2>QUICK MENU</h2>
-                <ul class="mq_main">
-                    <li>
-                        <a href="javascript:;" class="icon_sc">
-                            <span class="tit">가족친화인증기업</span>
-                            <span class="txt">가족친화인증 기업 및 기관 현황</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="javascript:;" class="icon_ph">
-                            <span class="tit">온라인 채용관</span>
-                            <span class="txt">가족친화인증 기업 온라인 채용</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="javascript:;" class="icon_cb">
-                            <span class="tit">기업 인센티브</span>
-                            <span class="txt">가족친화인증 기업 인센티브</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="javascript:;" class="icon_cp">
-                            <span class="tit">근로자 인센티브</span>
-                            <span class="txt">근로자 인센티브</span>
-                        </a>
-                    </li>
-                </ul>
-                <div class="mq_sub">
-                    <div class="title">
-                        <span class="en">QUICK SERVICE</span>
-                        <span class="ko">빠른 서비스</span>
-                    </div>
-                    <ul class="list">
-                        <li><a href="javascript:;" class="icon_pv">예상점수 미리보기</a></li>
-                        <li><a href="javascript:;" class="icon_cf">가족친화 인증신청</a></li>
-                        <li><a href="javascript:;" class="icon_ct">컨설팅신청</a></li>
-                        <li><a href="javascript:;" class="icon_ec">직장교육신청</a></li>
-                        <li><a href="javascript:;" class="icon_cd">출입국카드 신청</a></li>
-                        <li><a href="javascript:;" class="icon_ck">자체점검등록</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div class="main_lastest">
-            <div class="container">
-                <h2>가족친화사업 소식</h2>
-                <div class="lst_slide_wrap">
-                    <div class="lst_taps">
-                        <div class="lst_tap">
-                            <h3><a href="javascript:;" class="active">공지사항</a></h3><h3><a href="javascript:;">최근게시물</a></h3>
+        <div id="section_01">
+            <div class="main_visual">
+                <div class="mv_inner">
+                    <div class="mv_item">
+                        <div class="mv_cnt" style="background-image: url('../../assets/images/main_visual_item1.png');">
+                            <div class="title">가족친화 <strong>우수사례</strong></div>
+                            <div class="text">일과 생활의 균형, 가족친화경영을 선도하는 가족친화 우수기업 카드뉴스 발간</div>
+                            <a href="javascript:;" class="btn_detail"><span>자세히보기</span></a>
                         </div>
-                        <div class="lst_box">
-                            <div class="box">
-                                <div id="lst_slide1" class="lst_slide">
-                                    <div class="swiper-container">
-                                        <div class="swiper-wrapper">
-                                            <div class="swiper-slide">
-                                                <div class="item"><a href="javascript:;">2023년 맞돌봄 사진 영상 공모전 홍보글</a><span class="date">2023-07-26</span></div>
-                                                <div class="item"><a href="javascript:;">우리 기업에 필요한 가족친화지원사업을 확인해 확인해 확인해 </a><span class="date">2023-07-26</span></div>
-                                                <div class="item"><a href="javascript:;">가족 친화형 ESG 경영 어떻게 운영할까? 우리 함께 우리 함께 우리 함께</a><span class="date">2023-07-26</span></div>
-                                                <div class="item"><a href="javascript:;">미래를 위한 가치 ESG</a><span class="date">2023-07-26</span></div>
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <div class="item"><a href="javascript:;">2023년 맞돌봄 사진 영상 공모전 홍보글</a><span class="date">2023-07-26</span></div>
-                                                <div class="item"><a href="javascript:;">우리 기업에 필요한 가족친화지원사업을 확인해 확인해 확인해 </a><span class="date">2023-07-26</span></div>
-                                                <div class="item"><a href="javascript:;">가족 친화형 ESG 경영 어떻게 운영할까? 우리 함께 우리 함께 우리 함께</a><span class="date">2023-07-26</span></div>
-                                                <div class="item"><a href="javascript:;">미래를 위한 가치 ESG</a><span class="date">2023-07-26</span></div>
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <div class="item"><a href="javascript:;">2023년 맞돌봄 사진 영상 공모전 홍보글</a><span class="date">2023-07-26</span></div>
-                                                <div class="item"><a href="javascript:;">우리 기업에 필요한 가족친화지원사업을 확인해 확인해 확인해 </a><span class="date">2023-07-26</span></div>
-                                                <div class="item"><a href="javascript:;">가족 친화형 ESG 경영 어떻게 운영할까? 우리 함께 우리 함께 우리 함께</a><span class="date">2023-07-26</span></div>
-                                                <div class="item"><a href="javascript:;">미래를 위한 가치 ESG</a><span class="date">2023-07-26</span></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="control">
-                                        <div class="swiper-button-prev">이전</div>
-                                        <div class="swiper-button-next">다음</div>
-                                    </div>
-                                </div>
-                                <a href="javascript:;" class="lst_all"><span>전체보기</span></a>
+                    </div>
+                    <div class="mv_item">
+                        <div class="mv_cnt" style="background-image: url('../../assets/images/main_visual_item1.png');">
+                            <div class="title">가족친화 <strong>우수사례222</strong></div>
+                            <div class="text">일과 생활의 균형, 가족친화경영을 선도하는 가족친화 우수기업 카드뉴스 발간</div>
+                            <a href="javascript:;" class="btn_detail"><span>자세히보기</span></a>
+                        </div>
+                    </div>
+                    <div class="mv_item">
+                        <div class="mv_cnt" style="background-image: url('../../assets/images/main_visual_item1.png');">
+                            <div class="title">가족친화 <strong>우수사례333</strong></div>
+                            <div class="text">일과 생활의 균형, 가족친화경영을 선도하는 가족친화 우수기업 카드뉴스 발간</div>
+                            <a href="javascript:;" class="btn_detail"><span>자세히보기</span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="paging_info">
+                    <span class="now"></span><div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div><span class="total"></span>
+                </div>
+                <script>
+                    //메인상단배너
+                    $(document).ready(function(){
+                        var $statusNow = $('.main_visual .paging_info .now');
+                        var $statusTotal = $('.main_visual .paging_info .total');
+                        var $slickElement = $('.main_visual .mv_inner');
+                        var $progressBar = $('.progress');
+                        var $progressBarSet = $slickElement.find('.mv_item').length;
+                        var $progressBarSetWid = ( (1) / ($progressBarSet) ) * 100;
+
+                        $progressBar
+                            .css('background-size', $progressBarSetWid + '% 100%')
+                            .attr('aria-valuenow', $progressBarSetWid );
+
+                        $slickElement.on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
+                        var i = (currentSlide ? currentSlide : 0) + 1;
+                        $statusNow.text(i);
+                        if(i < 10){
+                            $statusNow.text('0' + i);
+                        }else{
+                            $statusNow.text(i);
+                        }
+                        if(slick.slideCount < 10){
+                            $statusTotal.text('0' + slick.slideCount);
+                        }else{
+                            $statusTotal.text(slick.slideCount);
+                        }
+                        });
+
+                        $slickElement.on('beforeChange', function(event, slick, currentSlide, nextSlide) {   
+                            var calc = ( (nextSlide) / (slick.slideCount-1) ) * 100;
+
+                            $progressBar
+                            .css('background-size', calc + '% 100%')
+                            .attr('aria-valuenow', calc );
+                        });
+
+                        $slickElement.on('beforeChange', function(event, slick, currentSlide, nextSlide) {   
+                            var calc = ( (nextSlide+1) / (slick.slideCount) ) * 100;
+                            $progressBar
+                            .css('background-size', calc + '% 100%')
+                            .attr('aria-valuenow', calc );
+                        });
+
+                        $slickElement.slick({
+                            autoplay: true,
+                            arrows: true
+                        });
+                    });
+                    //메인상단배너 끝
+                </script>
+            </div>
+
+            <div class="main_quick">
+                <div class="container">
+                    <h2>QUICK MENU</h2>
+                    <ul class="mq_main">
+                        <li>
+                            <a href="javascript:;" class="icon_sc">
+                                <span class="tit">가족친화인증기업</span>
+                                <span class="txt">가족친화인증 기업 및 기관 현황</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" class="icon_ph">
+                                <span class="tit">온라인 채용관</span>
+                                <span class="txt">가족친화인증 기업 온라인 채용</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" class="icon_cb">
+                                <span class="tit">기업 인센티브</span>
+                                <span class="txt">가족친화인증 기업 인센티브</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" class="icon_cp">
+                                <span class="tit">근로자 인센티브</span>
+                                <span class="txt">근로자 인센티브</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="mq_sub">
+                        <div class="title">
+                            <span class="en">QUICK SERVICE</span>
+                            <span class="ko">빠른 서비스</span>
+                        </div>
+                        <ul class="list">
+                            <li><a href="javascript:;" class="icon_pv">예상점수 미리보기</a></li>
+                            <li><a href="javascript:;" class="icon_cf">가족친화 인증신청</a></li>
+                            <li><a href="javascript:;" class="icon_ct">컨설팅신청</a></li>
+                            <li><a href="javascript:;" class="icon_ec">직장교육신청</a></li>
+                            <li><a href="javascript:;" class="icon_cd">출입국카드 신청</a></li>
+                            <li><a href="javascript:;" class="icon_ck">자체점검등록</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="section_02">
+            <div class="main_lastest">
+                <div class="container">
+                    <h2>가족친화사업 소식</h2>
+                    <div class="lst_slide_wrap">
+                        <div class="lst_taps">
+                            <div class="lst_tap">
+                                <h3><a href="javascript:;" class="active">공지사항</a></h3><h3><a href="javascript:;">최근게시물</a></h3>
                             </div>
-                            <div class="box" style="display:none;">
-                                <div id="lst_slide2" class="lst_slide">
-                                    <div class="swiper-container">
-                                        <div class="swiper-wrapper">
-                                            <div class="swiper-slide">
-                                                <div class="item"><a href="javascript:;">미래를 위한 가치 ESG</a><span class="date">2023-07-26</span></div>
-                                                <div class="item"><a href="javascript:;">우리 기업에 필요한 가족친화지원사업을 확인해 확인해 확인해 </a><span class="date">2023-07-26</span></div>
-                                                <div class="item"><a href="javascript:;">2023년 맞돌봄 사진 영상 공모전 홍보글</a><span class="date">2023-07-26</span></div>
-                                                <div class="item"><a href="javascript:;">가족 친화형 ESG 경영 어떻게 운영할까? 우리 함께 우리 함께 우리 함께</a><span class="date">2023-07-26</span></div>
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <div class="item"><a href="javascript:;">미래를 위한 가치 ESG</a><span class="date">2023-07-26</span></div>
-                                                <div class="item"><a href="javascript:;">우리 기업에 필요한 가족친화지원사업을 확인해 확인해 확인해 </a><span class="date">2023-07-26</span></div>
-                                                <div class="item"><a href="javascript:;">2023년 맞돌봄 사진 영상 공모전 홍보글</a><span class="date">2023-07-26</span></div>
-                                                <div class="item"><a href="javascript:;">가족 친화형 ESG 경영 어떻게 운영할까? 우리 함께 우리 함께 우리 함께</a><span class="date">2023-07-26</span></div>
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <div class="item"><a href="javascript:;">미래를 위한 가치 ESG</a><span class="date">2023-07-26</span></div>
-                                                <div class="item"><a href="javascript:;">우리 기업에 필요한 가족친화지원사업을 확인해 확인해 확인해 </a><span class="date">2023-07-26</span></div>
-                                                <div class="item"><a href="javascript:;">2023년 맞돌봄 사진 영상 공모전 홍보글</a><span class="date">2023-07-26</span></div>
-                                                <div class="item"><a href="javascript:;">가족 친화형 ESG 경영 어떻게 운영할까? 우리 함께 우리 함께 우리 함께</a><span class="date">2023-07-26</span></div>
+                            <div class="lst_box">
+                                <div class="box">
+                                    <div id="lst_slide1" class="lst_slide">
+                                        <div class="swiper-container">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide">
+                                                    <div class="item"><a href="javascript:;">2023년 맞돌봄 사진 영상 공모전 홍보글</a><span class="new">새글</span><span class="date">2023-07-26</span></div>
+                                                    <div class="item"><a href="javascript:;">우리 기업에 필요한 가족친화지원사업을 확인해 확인해 확인해 </a><span class="new">새글</span><span class="date">2023-07-26</span></div>
+                                                    <div class="item"><a href="javascript:;">가족 친화형 ESG 경영 어떻게 운영할까? 우리 함께 우리 함께 우리 함께</a><span class="date">2023-07-11</span></div>
+                                                    <div class="item"><a href="javascript:;">미래를 위한 가치 ESG</a><span class="date">2023-07-26</span></div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="item"><a href="javascript:;">2023년 맞돌봄 사진 영상 공모전 홍보글</a><span class="new">새글</span><span class="date">2023-07-26</span></div>
+                                                    <div class="item"><a href="javascript:;">우리 기업에 필요한 가족친화지원사업을 확인해 확인해 확인해 </a><span class="date">2023-07-26</span></div>
+                                                    <div class="item"><a href="javascript:;">가족 친화형 ESG 경영 어떻게 운영할까? 우리 함께 우리 함께 우리 함께</a><span class="date">2023-10-11</span></div>
+                                                    <div class="item"><a href="javascript:;">미래를 위한 가치 ESG</a><span class="date">2023-07-26</span></div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="item"><a href="javascript:;">2023년 맞돌봄 사진 영상 공모전 홍보글</a><span class="new">새글</span><span class="date">2023-07-26</span></div>
+                                                    <div class="item"><a href="javascript:;">우리 기업에 필요한 가족친화지원사업을 확인해 확인해 확인해 </a><span class="date">2023-07-26</span></div>
+                                                    <div class="item"><a href="javascript:;">가족 친화형 ESG 경영 어떻게 운영할까? 우리 함께 우리 함께 우리 함께</a><span class="date">2023-07-26</span></div>
+                                                    <div class="item"><a href="javascript:;">미래를 위한 가치 ESG</a><span class="date">2023-07-26</span></div>
+                                                </div>
                                             </div>
                                         </div>
+                                        <div class="control">
+                                            <div class="swiper-button-prev">이전</div>
+                                            <div class="swiper-button-next">다음</div>
+                                        </div>
                                     </div>
-                                    <div class="control">
-                                        <div class="swiper-button-prev">이전</div>
-                                        <div class="swiper-button-next">다음</div>
+                                    <a href="javascript:;" class="lst_all"><span>전체보기</span></a>
+                                </div>
+                                <div class="box" style="display:none;">
+                                    <div id="lst_slide2" class="lst_slide">
+                                        <div class="swiper-container">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide">
+                                                    <div class="item"><a href="javascript:;">미래를 위한 가치 ESG</a><span class="date">2023-07-26</span></div>
+                                                    <div class="item"><a href="javascript:;">우리 기업에 필요한 가족친화지원사업을 확인해 확인해 확인해 </a><span class="date">2023-07-26</span></div>
+                                                    <div class="item"><a href="javascript:;">2023년 맞돌봄 사진 영상 공모전 홍보글</a><span class="date">2023-07-26</span></div>
+                                                    <div class="item"><a href="javascript:;">가족 친화형 ESG 경영 어떻게 운영할까? 우리 함께 우리 함께 우리 함께</a><span class="date">2023-07-26</span></div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="item"><a href="javascript:;">미래를 위한 가치 ESG</a><span class="date">2023-07-26</span></div>
+                                                    <div class="item"><a href="javascript:;">우리 기업에 필요한 가족친화지원사업을 확인해 확인해 확인해 </a><span class="date">2023-07-26</span></div>
+                                                    <div class="item"><a href="javascript:;">2023년 맞돌봄 사진 영상 공모전 홍보글</a><span class="date">2023-07-26</span></div>
+                                                    <div class="item"><a href="javascript:;">가족 친화형 ESG 경영 어떻게 운영할까? 우리 함께 우리 함께 우리 함께</a><span class="date">2023-07-26</span></div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="item"><a href="javascript:;">미래를 위한 가치 ESG</a><span class="date">2023-07-26</span></div>
+                                                    <div class="item"><a href="javascript:;">우리 기업에 필요한 가족친화지원사업을 확인해 확인해 확인해 </a><span class="date">2023-07-26</span></div>
+                                                    <div class="item"><a href="javascript:;">2023년 맞돌봄 사진 영상 공모전 홍보글</a><span class="date">2023-07-26</span></div>
+                                                    <div class="item"><a href="javascript:;">가족 친화형 ESG 경영 어떻게 운영할까? 우리 함께 우리 함께 우리 함께</a><span class="date">2023-07-26</span></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="control">
+                                            <div class="swiper-button-prev">이전</div>
+                                            <div class="swiper-button-next">다음</div>
+                                        </div>
+                                    </div>
+                                    <a href="javascript:;" class="lst_all"><span>전체보기</span></a>
+                                </div>
+                                <script>
+                                    $('.lst_tap a').click(function(){
+                                        let tap_index = $(this).closest('h3').index();
+                                        $('.lst_tap a').removeClass('active');
+                                        $(this).addClass('active');
+                                        $('.lst_box .box').hide();
+                                        $('.lst_box .box').eq(tap_index).show();
+                                    });
+                                    var swiper = new Swiper("#lst_slide1 .swiper-container", {
+                                        observer: true,
+                                        observeParents: true,
+                                        navigation: {
+                                        nextEl: "#lst_slide1 .swiper-button-next",
+                                        prevEl: "#lst_slide1 .swiper-button-prev",
+                                        },
+                                    });
+                                    var swiper = new Swiper("#lst_slide2 .swiper-container", {
+                                        observer: true,
+                                        observeParents: true,
+                                        navigation: {
+                                        nextEl: "#lst_slide2 .swiper-button-next",
+                                        prevEl: "#lst_slide2 .swiper-button-prev",
+                                        },
+                                    });
+                                </script>
+                            </div>
+                        </div>
+                        <div class="lst_banner">
+                            <div class="swiper-container">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                    <div class="banner_img" style="background-image: url('../../assets/images/dummy/lst_banner.jpg');"></div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="banner_img" style="background-image: url('../../assets/images/dummy/lst_banner.jpg');"></div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="banner_img" style="background-image: url('../../assets/images/dummy/lst_banner.jpg');"></div>
                                     </div>
                                 </div>
-                                <a href="javascript:;" class="lst_all"><span>전체보기</span></a>
+                            </div>
+                            <div class="control">
+                                <div class="swiper-button-play" style="display:none;">재생</div>
+                                <div class="swiper-button-pause">일시정지</div>
+                                <div class="swiper-button-prev">이전</div>
+                                <div class="swiper-pagination"></div>
+                                <div class="swiper-button-next">다음</div>
                             </div>
                             <script>
-                                $('.lst_tap a').click(function(){
-                                    let tap_index = $(this).closest('h3').index();
-                                    $('.lst_tap a').removeClass('active');
-                                    $(this).addClass('active');
-                                    $('.lst_box .box').hide();
-                                    $('.lst_box .box').eq(tap_index).show();
-                                });
-                                var swiper = new Swiper("#lst_slide1 .swiper-container", {
-                                    observer: true,
-                                    observeParents: true,
-                                    navigation: {
-                                    nextEl: "#lst_slide1 .swiper-button-next",
-                                    prevEl: "#lst_slide1 .swiper-button-prev",
-                                    },
-                                });
-                                var swiper = new Swiper("#lst_slide2 .swiper-container", {
-                                    observer: true,
-                                    observeParents: true,
-                                    navigation: {
-                                    nextEl: "#lst_slide2 .swiper-button-next",
-                                    prevEl: "#lst_slide2 .swiper-button-prev",
-                                    },
-                                });
+                            var lst_swiper = new Swiper(".lst_banner .swiper-container", {
+                                pagination: {
+                                el: ".lst_banner .swiper-pagination",
+                                type: "fraction",
+                                },
+                                autoplay: {
+                                    delay: 2500,
+                                    disableOnInteraction: false,
+                                },
+                                navigation: {
+                                nextEl: ".lst_banner .swiper-button-next",
+                                prevEl: ".lst_banner .swiper-button-prev",
+                                },
+                            });
+                            $(".lst_banner .swiper-button-pause").click(function(){
+                                lst_swiper.autoplay.stop();
+                                $(".lst_banner .swiper-button-pause").hide();
+                                $(".lst_banner .swiper-button-play").show();
+                            });
+
+                            $(".lst_banner .swiper-button-play").click(function(){
+                                lst_swiper.autoplay.start();
+                                $(".lst_banner .swiper-button-pause").show();
+                                $(".lst_banner .swiper-button-play").hide();
+                            });
                             </script>
                         </div>
                     </div>
-                    <div class="lst_banner">
+
+                    <div class="lst_col">
+                        <h3>홍보자료</h3>
+                        <ul class="lst_list">
+                            <li>
+                                <a href="javascript:;">
+                                    <span class="thum"><span style="background-image: url('../../assets/images/dummy/lst_col1.jpg');"></span></span>
+                                    <span class="subject">가족친화형 ESG 경영 어떻게 운영할까 어떻게 운영할까 어떻게 운영할까</span>
+                                    <span class="date">2023-02-02</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">
+                                    <span class="thum"><span style="background-image: url('../../assets/images/dummy/lst_col2.jpg');"></span></span>
+                                    <span class="subject">가족친화형 ESG 경영 어떻게 운영할까 어떻게 운영할까 어떻게 운영할까</span>
+                                    <span class="date">2023-02-02</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">
+                                    <span class="thum"><span style="background-image: url('../../assets/images/dummy/lst_col3.jpg');"></span></span>
+                                    <span class="subject">가족친화형 ESG 경영 어떻게 운영할까 어떻게 운영할까 어떻게 운영할까</span>
+                                    <span class="date">2023-02-02</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <a href="javascript:;" class="lst_all">전체보기</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="section_03">
+            <div class="main_snav">
+                <div class="container">
+                    <div class="title">
+                        <h2>실천하는 가족친화<br/>실현되는 행복일상</h2>
+                        <div class="control">
+                            <div class="swiper-button-prev">이전</div>
+                            <div class="swiper-button-next">다음</div>
+                        </div>
+                    </div>
+                    <div class="snav_slide">
                         <div class="swiper-container">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
-                                   <div class="banner_img" style="background-image: url('../../assets/images/dummy/lst_banner.jpg');"></div>
+                                    <a href="javascript:;" class="item">
+                                        <span class="cate">가족친화인증</span>
+                                        <span class="subject">가족친화제도를 운영하는 기업·기관에 인증 부여</span>
+                                    </a>
                                 </div>
                                 <div class="swiper-slide">
-                                    <div class="banner_img" style="background-image: url('../../assets/images/dummy/lst_banner.jpg');"></div>
+                                    <a href="javascript:;" class="item">
+                                        <span class="cate">인증준비컨설팅</span>
+                                        <span class="subject">기업에 적합한 체계적인 인증준비를 위한 컨설팅 지원</span>
+                                    </a>
                                 </div>
-                                 <div class="swiper-slide">
-                                    <div class="banner_img" style="background-image: url('../../assets/images/dummy/lst_banner.jpg');"></div>
+                                <div class="swiper-slide">
+                                    <a href="javascript:;" class="item">
+                                        <span class="cate">문화컨설팅</span>
+                                        <span class="subject">새로운 프로그램 발굴 확대를 위한 기업 맞춤형 컨설팅</span>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="javascript:;" class="item">
+                                        <span class="cate">직장교육</span>
+                                        <span class="subject">일 가정 양립 문화 확산을 위한 가족친화 교육 제공</span>
+                                    </a>
                                 </div>
                             </div>
                         </div>
-                        <div class="control">
-                            <div class="swiper-button-prev">이전</div>
-                            <div class="swiper-pagination"></div>
-                            <div class="swiper-button-next">다음</div>
-                        </div>
                         <script>
-                        var swiper = new Swiper(".lst_banner .swiper-container", {
-                            pagination: {
-                            el: ".lst_banner .swiper-pagination",
-                            type: "fraction",
-                            },
+                        var swiper = new Swiper(".snav_slide .swiper-container", {
+                            slidesPerView: "auto",
+                            spaceBetween: 26,
                             navigation: {
-                            nextEl: ".lst_banner .swiper-button-next",
-                            prevEl: ".lst_banner .swiper-button-prev",
+                            nextEl: ".main_snav .swiper-button-next",
+                            prevEl: ".main_snav .swiper-button-prev",
                             },
                         });
                         </script>
                     </div>
                 </div>
-
-                <div class="lst_col">
-                    <h3>홍보자료</h3>
-                    <ul class="lst_list">
-                        <li>
-                            <a href="javascript:;">
-                                <span class="thum"><span style="background-image: url('../../assets/images/dummy/lst_col1.jpg');"></span></span>
-                                <span class="subject">가족친화형 ESG 경영 어떻게 운영할까 어떻게 운영할까 어떻게 운영할까</span>
-                                <span class="date">2023-02-02</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="javascript:;">
-                                <span class="thum"><span style="background-image: url('../../assets/images/dummy/lst_col2.jpg');"></span></span>
-                                <span class="subject">가족친화형 ESG 경영 어떻게 운영할까 어떻게 운영할까 어떻게 운영할까</span>
-                                <span class="date">2023-02-02</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="javascript:;">
-                                <span class="thum"><span style="background-image: url('../../assets/images/dummy/lst_col3.jpg');"></span></span>
-                                <span class="subject">가족친화형 ESG 경영 어떻게 운영할까 어떻게 운영할까 어떻게 운영할까</span>
-                                <span class="date">2023-02-02</span>
-                            </a>
-                        </li>
-                    </ul>
-                    <a href="javascript:;" class="lst_all">전체보기</a>
-                </div>
             </div>
         </div>
 
-        <div class="main_snav">
-            <div class="container">
-                <div class="title">
-                    <h2>실천하는 가족친화<br/>실현되는 행복일상</h2>
-                    <div class="control">
-                        <div class="swiper-button-prev">이전</div>
-                        <div class="swiper-button-next">다음</div>
-                    </div>
-                </div>
-                <div class="snav_slide">
-                    <div class="swiper-container">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <a href="javascript:;" class="item">
-                                    <span class="cate">가족친화인증</span>
-                                    <span class="subject">가족친화제도를 운영하는 기업·기관에 인증 부여</span>
-                                </a>
+        <div id="section_04">
+            <div class="main_bs">
+                <div class="container">
+                    <div class="bs_wrap">
+                        <div class="bs_box main_case">
+                            <div class="title">
+                                <h3>가족친화 우수사례</h3>
+                                <a href="javascript:;" class="more">우수사례카드뉴스</a>
                             </div>
-                            <div class="swiper-slide">
-                                <a href="javascript:;" class="item">
-                                    <span class="cate">인증준비컨설팅</span>
-                                    <span class="subject">기업에 적합한 체계적인 인증준비를 위한 컨설팅 지원</span>
-                                </a>
-                            </div>
-                            <div class="swiper-slide">
-                                <a href="javascript:;" class="item">
-                                    <span class="cate">문화컨설팅</span>
-                                    <span class="subject">새로운 프로그램 발굴 확대를 위한 기업 맞춤형 컨설팅</span>
-                                </a>
-                            </div>
-                            <div class="swiper-slide">
-                                <a href="javascript:;" class="item">
-                                    <span class="cate">직장교육</span>
-                                    <span class="subject">일 가정 양립 문화 확산을 위한 가족친화 교육 제공</span>
-                                </a>
+                            <div class="content">
+                                <div class="tit">가족친화<br/>우수사례집</div>
+                                <div class="cnt">
+                                    <ul class="list">
+                                        <li><a href="javascript:">2023년 사례집</a></li>
+                                        <li><a href="javascript:">2022년 사례집</a></li>
+                                        <li><a href="javascript:">2021년 사례집</a></li>
+                                    </ul>
+                                    <a href="javascript:;" class="case_more">더 보기</a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <script>
-                    var swiper = new Swiper(".snav_slide .swiper-container", {
-                        slidesPerView: "auto",
-                        spaceBetween: 26,
-                        navigation: {
-                        nextEl: ".main_snav .swiper-button-next",
-                        prevEl: ".main_snav .swiper-button-prev",
-                        },
-                    });
-                    </script>
-                </div>
-            </div>
-        </div>
 
-        <div class="main_bs">
-            <div class="container">
-                <div class="bs_wrap">
-                    <div class="bs_box main_case">
-                        <div class="title">
-                            <h3>가족친화 우수사례</h3>
-                            <a href="javascript:;" class="more">우수사례카드뉴스</a>
-                        </div>
-                        <div class="content">
-                            <div class="tit">가족친화<br/>우수사례집</div>
-                            <div class="cnt">
-                                <ul class="list">
-                                    <li><a href="javascript:">2023년 사례집</a></li>
-                                    <li><a href="javascript:">2022년 사례집</a></li>
-                                    <li><a href="javascript:">2021년 사례집</a></li>
-                                </ul>
-                                <a href="javascript:;" class="case_more">더 보기</a>
+                        <div class="bs_box main_certify">
+                            <div class="title">
+                                <h3>인증현황 <span class="total">총계 5,415</span></h3>
+                                <a href="javascript:;" class="more">지역별 현황</a>
                             </div>
-                        </div>
-                    </div>
-
-                    <div class="bs_box main_certify">
-                        <div class="title">
-                            <h3>인증현황 <span class="total">총계 5,415</span></h3>
-                            <a href="javascript:;" class="more">지역별 현황</a>
-                        </div>
-                        <div class="content">
-                            <div class="tit">기업 및 기관<br/>인증 현황 <span class="base">2022년 12월 기준</span></div>
-                            <div class="cnt">
-                                <div class="item large"><strong>대기업</strong><span>591</span></div>
-                                <div class="item medium"><strong>중소기업</strong><span>591</span></div>
-                                <div class="item public"><strong>공공기관</strong><span>591</span></div>
+                            <div class="content">
+                                <div class="tit">기업 및 기관<br/>인증 현황 <span class="base">2022년 12월 기준</span></div>
+                                <div class="cnt">
+                                    <div class="item large"><strong>대기업</strong><span>591</span></div>
+                                    <div class="item medium"><strong>중소기업</strong><span>591</span></div>
+                                    <div class="item public"><strong>공공기관</strong><span>591</span></div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -858,7 +883,24 @@
     </div>
     <!-- //content -->
 
-    <a href="javascript:;" id="to_top">상단으로 이동</a>
+    <div class="quick_nav">
+        <div class="quick_list">
+            <div class="item">
+                <a href="javascript:;" data-rel="section_01" class="home active">가족친화<br/>서비스</a>
+            </div>
+            <div class="item">
+                <a href="javascript:;" data-rel="section_02" class="heart">가족친화<br/>소식</a>
+            </div>
+            <div class="item">
+                <a href="javascript:;" data-rel="section_03" class="talk">가족친화<br/>안내</a>
+            </div>
+            <div class="item">
+                <a href="javascript:;" data-rel="section_04" class="recomend">인증현황<br/>우수사례</a>
+            </div>
+        </div>
+        <a href="javascript:;" id="to_top">상단으로 이동</a>
+    </div>
+
 
 	<div id="footer">
         <div class="container">
