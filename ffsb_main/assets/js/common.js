@@ -93,43 +93,67 @@ $('.to_top').click(function(){
 	$('html, body').animate({scrollTop:0}, 'slow');
 	return false;
 });
-
-
 $(document).ready(function () {
-    // 스크롤 이벤트
-    $(window).scroll(function () {
-      var scrollPos = $(window).scrollTop();
-      var windowHeight = $(window).height();
-      var scrollThreshold = windowHeight / 3; // 화면 높이의 1/3
+    var activeItem = null;
+    var sectionOffsets = {};
 
-      $('.item a').removeClass('active');
-
-      $('.item a').each(function () {
+    // 메인 퀵메뉴
+    $('.item a').each(function () {
         var targetId = $(this).data('rel');
         var targetElement = $('#' + targetId);
         if (targetElement.length > 0) {
-            var targetOffset = targetElement.offset().top;
-            // 이후의 코드
-          } else {
-            console.error("Element with ID '" + targetId + "' not found.");
-          }
-
-        if (scrollPos + scrollThreshold >= targetOffset && scrollPos - scrollThreshold < targetOffset) {
-          $(this).addClass('active');
+            sectionOffsets[targetId] = targetElement.offset().top;
         }
-      });
+    });
+
+    $(window).scroll(function () {
+        var scrollPos = $(window).scrollTop();
+        var windowHeight = $(window).height();
+        var scrollThreshold = windowHeight / 5; 
+
+        var clickedItem = null;
+        for (var targetId in sectionOffsets) {
+            var targetOffset = sectionOffsets[targetId];
+            if (scrollPos + scrollThreshold >= targetOffset && scrollPos - scrollThreshold < targetOffset) {
+                clickedItem = $('.item a[data-rel="' + targetId + '"]');
+            }
+        }
+        if (scrollPos <= sectionOffsets["section_01"] + scrollThreshold && activeItem) {
+            $('.item a').removeClass('active');
+            activeItem = null;
+        }
+        if (scrollPos <= sectionOffsets["section_01"] + scrollThreshold) {
+            $('.item a[data-rel="section_01"]').addClass('active');
+            activeItem = $('.item a[data-rel="section_01"]');
+        } else {
+            if (clickedItem) {
+                if (activeItem !== clickedItem) {
+                    $('.item a').removeClass('active');
+                    clickedItem.addClass('active');
+                    activeItem = clickedItem;
+                }
+            }
+        }
     });
 
     // 클릭 이벤트
     $('.item a').click(function () {
-      var targetId = $(this).data('rel');
-      var targetOffset = $('#' + targetId).offset().top;
+        var targetId = $(this).data('rel');
+        if (targetId == 'section_01') {
+            var targetOffset = sectionOffsets[targetId];
+        } else {
+            var targetOffset = sectionOffsets[targetId] + 60;
+        }
 
-      $('html, body').animate(
-        {
-          scrollTop: targetOffset,
-        },
-        500 // 스무스 스크롤 시간 (밀리초 단위)
-      );
+        $('.item a').removeClass('active');
+        $(this).addClass('active');
+        activeItem = this;
+
+        $('html, body').animate(
+            {
+                scrollTop: targetOffset,
+            },
+            500 
+        );
     });
-  });
+});
