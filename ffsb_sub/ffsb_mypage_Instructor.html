@@ -410,6 +410,8 @@
     .paging_new .num:hover{text-decoration:none;}
     .paging_new .num:hover span{border-bottom:1px solid #666;}
     .paging_new .num.on:hover span{border-bottom:1px solid #fff;}
+    .paging_new.paging_pc{display:flex;}
+    .paging_new.paging_mobile{display:none;}
     @media (max-width: 768px) {
         .mb_info{margin-top:20px;border-top:2px solid #464D5D;padding:15px 10px;display:block;}
         .mb_info .info{}
@@ -455,14 +457,13 @@
         .mb_table .table .status{display:inline-block;padding:3px 0;margin-top:0;margin-left:4px;}
         .mb_table .table .btn1,
         .mb_table .table .btn2{margin-top:0;margin-bottom:0;}
-        .paging_new{flex-wrap:wrap;align-items:center;}
         .paging_new .first,
         .paging_new .prev,
         .paging_new .next,
-        .paging_new .last{width:32px;height:32px;margin-top:2px;margin-bottom:2px;border-left:1px solid #ddd;}
-        .paging_new .first{margin-right:2px;}
-        .paging_new .last{margin-left:2px;}
-        .paging_new .num{min-width:32px;height:32px;padding:8px 3px 0 3px;font-size:12px;margin-top:2px;margin-bottom:2px;border:0;}
+        .paging_new .last{width:32px;height:32px;}
+        .paging_new .num{min-width:32px;height:32px;padding:8px 2px 0 2px;font-size:12px;}
+        .paging_new.paging_pc{display:none;}
+        .paging_new.paging_mobile{display:flex;}
     }
     </style>
 
@@ -560,7 +561,7 @@
                     </div>
                 </div>
 
-                <div class="paging_new">
+                <div class="paging_new paging_pc">
                     <a href="javascript:fnGoPage('1', '')" class="first">처음으로</a>
                     <a href="javascript:fnGoPage('1', '')" class="prev">이전 10개</a>
                     <a href="#" class="num on"><span>1</span></a>
@@ -575,6 +576,18 @@
                     <a href="javascript:fnGoPage('10', '')" class="num"><span>10</span></a>
                     <a href="javascript:fnGoPage('10', '')" class="next">다음 10개</a>
                     <a href="javascript:fnGoPage('10', '')" class="last">끝으로</a>
+                </div>
+
+                <div class="paging_new paging_mobile">
+                    <a href="javascript:fnGoPage('1', '')" class="first">처음으로</a>
+                    <a href="javascript:fnGoPage('1', '')" class="prev">이전 5개</a>
+                    <a href="#" class="num on"><span>1</span></a>
+                    <a href="javascript:fnGoPage('2', '')" class="num"><span>2</span></a>
+                    <a href="javascript:fnGoPage('3', '')" class="num"><span>3</span></a>
+                    <a href="javascript:fnGoPage('4', '')" class="num"><span>4</span></a>
+                    <a href="javascript:fnGoPage('5', '')" class="num"><span>5</span></a>
+                    <a href="javascript:fnGoPage('6', '')" class="next">다음 5개</a>
+                    <a href="javascript:fnGoPage('6', '')" class="last">끝으로</a>
                 </div>
             </div><!-- end .inner -->
         </div><!-- end #content -->
