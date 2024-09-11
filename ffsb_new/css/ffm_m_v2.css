@@ -1,0 +1,860 @@
+@charset "utf-8";
+
+/*		작업일 		  			 작업자  	내용			*/
+/*		2022.05.19 - 2022.05.25  이다혜  	ffm.css 의 반응형 css를 현 페이지로 옮김	*/
+/**/
+@media screen and (min-width:1341px){
+	/* 가족친화 인증 자체점검 관련 페이지 */
+	.poas {top:30px; left:40px}
+}
+@media screen and (max-width:1340px){
+	#quick{position:fixed; top:130px;-webkit-transform:translate3d(86px,0,0);-moz-transform:translate3d(86px,0,0);transform:translate3d(86px,0,0); }
+	.quick-open #quick{-webkit-transform:translate3d(0,0,0);-moz-transform:translate3d(0,0,0);transform:translate3d(0,0,0);}
+	#quick.out{right:-86px;}
+	
+	/* 가족친화 인증 자체점검 관련 페이지 */
+	.poas {top:30px; left:40px}
+}
+@media screen and (min-width:1341px){
+	#quick .btn{display:none;}
+	#quick.sticky{position:fixed;top:0; }
+}
+
+@media screen and (min-width:1341px){
+	#quick .btn{display:none;}
+	#quick.sticky{position:fixed;top:0; }
+}
+
+@media screen and (min-width:1px) and (max-width:1200px) {
+	
+	.lists3 .box {padding:0;}
+	.lists3 .title {height:25px; overflow:hidden;}
+	.a-cols4 {margin-bottom:20px;}
+	.graph-boxs1 > .one {width:100%; overflow:scroll;}
+	.graph-boxs1 > .two {width:100%;}
+	.kr_wrap {width:100%; overflow-x:auto;}
+	.kr_map {width:800px;}
+	.card_list_wrap li {text-align:center; margin-right:0 !important; width:33.3%;}
+	.diagrams1 {padding:2%; width:96%; overflow-x:auto;}
+}
+
+
+@media screen and (min-width:1px) and (max-width:1140px) {
+	#container > #content {width:100%}
+	.containers1 {width:100%;}
+	/* 오른쪽 날개 배너 hide */
+	#quick .btn {display: none;}
+	
+	.hd_top .hd_bottom {display:none;}
+	
+	/* 메인배너 */
+	.mains .grid1 > .column.one {width: 50%;}
+	.mains .grid1 > .column.two {width: 50%;}
+	/*가족친화 인증 ~~ 직장 교육 */
+	.mains .grid1 .col {width: 49%;}
+	
+	/* 공지사항 최신 게시물 */
+	.mains .grid2, .mains .box {overflow: hidden; }
+	.mains .grid2 {width: 100%;}
+	.mains .grid2 .column.one {width:100%; background-color: none; float:none; }
+	.mains .grid2 .column.one > .inner {margin: 15px; background: #fff; padding:0;}
+	.mains .grid2 .col {width:45%;}
+				  .boards1{padding:20px;}
+				  .boards1 .more{top:25px; right:10px; }
+				  
+	/* 중간 미들 배너 */
+	.mains .grid2 .column.two {float: none; width:100%; padding-right: 0;}
+	.mains .grid2 .column.two .row{float:left; height:auto; width: 23%; margin:1%;}
+	.mains .grid2 .column.two .row a img{width:100%;}
+
+	/* 홍보자료 */
+	.boards2 .cont {width:100%;}
+	.boards2 .list li {width: 25%; padding-left:0;}
+	.boards2 .list li a, .boards2 .list li span {padding-left:0px; padding-right:10px;}
+	.boards2 .list li:last-child a, .boards2 .list li:last-child span {padding-right: 0;}
+	
+	
+	
+#header > .inner,
+#footer > .inner{ min-width:auto;width:auto;}
+
+
+}
+
+/** @media screen and (min-width:1px) and (max-width:1046px) 시작 **/
+@media screen and (min-width:1px) and (max-width:1046px) {
+	/* 상단 메인 컨텐츠  */
+	.mains .grid1 > .column.one {width: 40%; height: auto;}
+	.mains .grid1 > .column.two {width: 58%; height: auto;}
+		/* 롤링 컨텐츠 이미지 */
+		#main_slide .cycle-slideshow img {width: 100%;}
+		
+		/* 가족친화인증 외 3개 컨텐츠 내용 */
+		/* 3줄이상 넘어가면 ... 표기 */
+		.boxs7 .txt{position:relative; z-index:3; max-height:65px; overflow:hidden;  text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical;}
+		
+		.mains .grid1 .column.two .row:first-child {margin-bottom :18px;}
+		.mains .grid1 .col {width: 49%; height: auto; padding-right: 1%;}
+		.mains .grid1 .col:nth-child(even) {padding-right: 0%;}
+		/* 바로가기 옆 아이콘 */
+		.boxs7 .icon {width:20%}
+		.boxs7 .icon  img {width:100%}
+		
+		
+		
+	/* 공지사항, 최신게시물 */
+	.mains .grid2 .column.one {width: 100%; float: none; height: auto; margin-bottom: 15px;}
+	.mains .grid2 .column.one > .inner {padding:25px 30px;}
+	.mains .grid2 .col {width: 48%}
+	
+	/* 가족친화 ~~~ 출입국우대카드 배너 */
+	.mains .grid2 .column.two {width: 100%; float: none;}
+	.mains .grid2 .column.two:after {content: ""; display: block; clear: both;}
+	.mains .grid2 .column.two .row {width: 48.5%; height:auto; float: left; margin:1% 0 1% 1% !important; text-align: center;}
+	
+		/* 짝수만 마진 0 */
+		.mains .grid2 .column.two .row:nth-child(even) {margin-right:0%;}
+		/* 이미지 뒤 백그라운드 색상 지정 */
+		.mains .grid2 .column.two .row:nth-child(1){background: #d0f3f7;}
+		.mains .grid2 .column.two .row:nth-child(2){background: #fbf1dd;}
+		.mains .grid2 .column.two .row:nth-child(3){background: #f6e5e1;}
+		.mains .grid2 .column.two .row:nth-child(4){background: #cde7f6;}
+		
+	/* 가족친화 ~~~ 출입국우대카드 배너 끝*/
+	
+	/* 홍보자료 */
+	.boards2 .list li{width: 48%; padding:0; margin-right: 2%; margin-bottom:20px;}
+	.boards2 .list li:nth-child(even){ margin-right: 0%;}
+	
+	/* 홍보자료 끝 */
+	
+	/**서브 페이지 관련 시작***********************************/
+	
+	/* 서프페이지 컨텐츠 */
+	#container{padding: 0 15px;}
+	#twoColWrap {width: 100%; background: none;}
+	/* 서브페이지 왼쪽 메뉴 안보이기 */
+	#twoColWrap #sideBar {display: none;}
+	/* 메인 컨텐츠 */
+	#twoColWrap #content{float: none; width:100%;}
+	
+	/* 가족친화 인증 기대 효과 */
+	.diagrams2 .spot.one {top: 50%; margin-left:-65px!important;}
+	.diagrams2 .spot.one .title {height: auto; width: auto;}
+	.diagrams2 .cont.two {position: absolute; top: -5%; left:50%; margin-left: 130px; padding-left: 0;}
+	
+	.diagrams2 .spot.three{left:50% !important; margin-left: -15% !important;}
+	.diagrams2 .cont.three {position: absolute; top: 50%; left:10%; margin-top: 0px !important; padding-right: 0!important;}
+	
+	.diagrams2 .spot.four {left:50% !important; margin-left: 3% !important;}
+	.diagrams2 .cont.four {right:9%; bottom:1%;}
+	
+	/**서브 페이지 관련 끝 ***********************************/
+	
+	
+	/* footer */
+	#footer {position: relative; width: 100%;}
+	#footer > .inner{ width: 100%;}
+	#footer .containers1 {width: 100%;}
+	/* footer 끝*/
+	
+	
+	.fls.js-row0 {width:100% !important; margin-bottom:100px;}
+	.frs.js-row1 {width:100% !important;}
+	.graph-boxs1 {padding:0;}
+}
+/** @media screen and (min-width:1px) and (max-width:1046px) 끝 **/
+
+
+/*** @media screen and (min-width:1px) and (max-width:960px) 시작  */
+@media screen and (min-width:1px) and (max-width:960px) {
+	/** 메인 화면 반응형 */
+	
+	/* 가족친화 인증 외 3개 컨텐츠 */
+	.boxs7 > .inner {padding: 5%;}
+	
+	/* 공지사항, 최신게시물 */
+	.mains .grid2 .column.one > .inner {padding:1%;}
+	
+}
+/*** @media screen and (min-width:1px) and (max-width:960px) 끝  */
+
+
+
+
+@media screen and (min-width:1px) and (max-width:870px) {
+	.steps2 .box1::before {background-image:none;}
+}
+
+@media screen and (min-width:1px) and (max-width:768px) {
+	/* 팝업관련 */
+	.main_popup #wrap {padding-top:0px;}
+	.top_pop {position:relative;top:0;left:0;margin-bottom:10px;}
+	.top_pop .slide-item__pos {width:100%}
+	#top_pop_slide .slide-item__pos img {width:952px;max-width:952px;margin-left:-476px;height:80px;}
+	#top_pop_slide #top_sl-next {top:-100px;width:30px;height:30px;background-size:30px 30px;top:-60px;}
+	#top_pop_slide #top_sl-prev {top:-100px;width:30px;height:30px;background-size:30px 30px;top:-60px;}
+	#top_pop_slide .top_controller_in_wrap {top:-23px;left:5px;}
+	#top_pop_slide .top_pop_close {top:-26px;right:5px;}
+	#top_pop_slide .top_pop_close input {top:5px;}
+	#top_pop_slide .top_pop_close label {top:5px;}
+	#top_pop_slide .top_pop_close a {top:3px;width:20px;}
+	.pc-root-btn {display:block;}
+	
+
+	/* 모바일 메뉴 관련 */
+	/*gnb*/
+	#header {height:55px;border-bottom:1px solid #ddd;position:fixed;top:0;left:0;width:100%;background-color: white;min-width:0;}
+	#header .one{position:absolute;  z-index:9998; height:55px; top:0;}
+	#header .header__in{position:relative; height: 55px;}
+	#header .navigation {display:none;}
+	#header .logo {float:none;padding-top:0;text-align:center;}
+	#header .logo a {display:inline-block; height:44px; padding-top:8px;}
+	#header .logo a img {height:100%;}
+	#header .info-box {float:none;display:none;}
+	
+	/* assets 리뉴얼 */
+	/* assets 리뉴얼 */
+	
+	/* 3라인 메뉴 > 로그인,회원가입  
+	.mobile_menu_open #header .info-box {display:block;position:absolute;top:0;right:0;z-index:9999;width:300px;}
+	.mobile_menu_open #header .info-box .list {padding-top:15px;}
+	.mobile_menu_open #header .info-box .list li {padding: 0 16px 10px 0}
+	.mobile_menu_open #header .info-box .list li:after {content: ""; clear: both;}
+					  #header .info-box .list li:before{display:none;}
+	*/
+	
+	
+	.top-nav__fav1 .top-go-btn {padding-right:0;width:275px;margin-left:5px;}
+	.gnb-ul {padding-left:0;}
+	/* 검색 */
+	.top-search {top:41px;}
+	
+	
+	/******* 모바일 메뉴 , 상단 3라인*/
+	
+	/* 모바일 메뉴 백그라운드 */
+	.mobile_top_nav{display:block; position:fixed; z-index:9998; top:0; right:1.2%;}
+	
+	.mobile_top_nav.selected{width:100%; height: 100%; background: rgba(0,0,0, .5);}
+	/*3라인*/
+	.mobile_top_nav .mobile_icon.selected{display: none;}
+	.mobile_top_nav .mobile_icon{/*right :10%;*/ width:40px; height: auto; margin-top:12px; display:block}
+	.mobile_top_nav .mobile_icon a {display:block; padding:5px; }
+	.mobile_top_nav .mobile_icon a span{display:block; background: #000; width:100%; height:3px; margin-bottom:6px;}
+	.mobile_top_nav .mobile_icon a span:nth-child(3){margin-bottom:0px;}
+	/* 상단 3라인 클릭 시 위치 */
+	/* .mobile_top_nav.selected {height:100%;overflow:auto;width:100%;right:0px;} */
+	
+	
+	/* 모바일 메뉴 네비게이션 */
+	#gnb_nav_mobile{
+		opacity:100%;position:relative;padding-top:48px;z-index:9999;background-color:#fff;
+		border-top:1px solid #d1d1d6;
+		background-color:#fff;
+
+		}
+	
+	.mobile_top_nav__in{
+		right:-320px;
+		width: 320px;
+	    position: fixed;
+	    top: 0;
+	    height: 100%;
+		background-color: #fff;
+		-webkit-transition: all 0.3s ease 0s;
+		   -moz-transition: all 0.3s ease 0s;
+			-ms-transition: all 0.3s ease 0s;
+			 -o-transition: all 0.3s ease 0s;
+				transition: all 0.3s ease 0s;
+		overflow:auto;
+	}
+	.mobile_top_nav.selected .mobile_top_nav__in {
+		right:0;
+			-webkit-box-shadow: 3px 4px 18px -7px rgba(0,0,0,0.75);
+		-moz-box-shadow: 3px 4px 18px -7px rgba(0,0,0,0.75);
+		box-shadow: 3px 4px 18px -7px rgba(0,0,0,0.75);
+
+	}
+	.font-size-box {display:none;}
+	.gnb-menu > a {width:auto;}
+	
+
+	#gnb_nav_mobile li.gnb-menu > a {width:auto;display:block;padding:0px 10px 0px 20px;height:38px;line-height:38px;background-image:url("../../commons/images/mobile/gnb_dotted.png");background-repeat:repeat-x;background-position:0 bottom;
+		font-size:17px;font-weight:800;color:#222;text-align:left;
+		border-top:1px solid #d1d1d6;
+		background-color:transparent;
+	}
+	#header .gnb li ul li {padding:0;}
+	#header .gnb li ul li a {padding:0 0 0 35px;}
+		
+		#header .gnb li ul li a:hover:before,
+		#header .gnb li ul li a:hover:after,
+		#header .gnb li ul li a:focus:before,
+		#header .gnb li ul li a:focus:after{content:'';position:absolute;top:50%;margin-top:-5px;border-left:4px solid #3771dc;border-top:4px solid transparent;border-bottom:4px solid transparent;display:none;}
+
+	#gnb_nav_mobile li.sub-nav__box__list:first-child{}
+	#gnb_nav_mobile li.sub-nav__box__list > a{border-top:1px solid #d1d1d6;padding:0px 10px 0px 35px;width:auto;height: 38px;line-height: 38px !important;font-weight:bold;}
+	#gnb_nav_mobile .gnb-menu:first-child {border-left:0px;}
+	.selected .sub-nav {border-top:0px;}
+
+		/*불켜짐*/
+		#gnb_nav_mobile li.gnb-menu.on .sub-nav{height: auto;visibility: visible;}
+		#gnb_nav_mobile li.gnb-menu.on > a {color:#000;}
+		#gnb_nav_mobile .sub-nav__box__list.on > a {color:#000;text-decoration:underline}
+		#gnb_nav_mobile .sub-nav__box__list.on > a span {color:#000;text-decoration:underline}
+
+
+		body #gnb_nav_mobile .gnb-menu {
+			background-image:url('../../commons/images/mobile/mobile-bul-minus.png');
+			background-repeat:no-repeat;
+			background-position:95% 20px;
+			background-size:14px auto;
+			width:100% !important;display:block;border-right:0;
+		}
+
+		#gnb_nav_mobile .gnb-menu.selected,
+		#gnb_nav_mobile .gnb-menu.on {
+			background-image:url('../../commons/images/mobile/mobile-bul-plus.png');
+			background-position:95% 13px;
+		}
+	/*3rd*/
+	#gnb_nav_mobile .sub-nav__3rd__ul {}
+	#gnb_nav_mobile .sub-nav__3rd__ul li {}
+	#gnb_nav_mobile .sub-nav__3rd__ul a {padding-left:45px;
+		background-image:url("../../commons/images/mobile/nav-3rd-bul.png");background-repeat:no-repeat;background-position:34px 12px;
+		background-size:6px auto;padding-bottom:5px;padding-top:5px
+	}
+	#gnb_nav_mobile .sub-nav__3rd a {color:#666;border-bottom:0px;font-size:13px;font-weight:normal;width:auto;
+		display:block;text-decoration:none;text-align:left;
+	}
+	#gnb_nav_mobile .sub-nav__3rd li:first-child {border-top:0px;}
+	#container {padding:10px;padding-top:67px;}
+
+	#gnb_nav_mobile .gnb-menu.nav-item.on .sub-nav{height:auto;    visibility: visible;}
+	#gnb_nav_mobile .gnb-menu.nav-item.on > a {color:#000;text-decoration:underline}
+	#gnb_nav_mobile .sub-nav__box__list.on > a span {color:#000;text-decoration:underline;}
+	#gnb_nav_mobile .sub-nav__3rd .on a {color:#000;font-weight:bold;}
+	#gnb_nav_mobile .sub-nav__3rd  a.on{color:#000;font-weight:bold;}
+
+	.main_search_box{background-color:transparent}
+	.m_se_btn{width:185px;}
+	.search_btn_top{width:32px}
+
+	.top-nav__box {
+	-webkit-transition: all 0.3s ease 0s;
+	   -moz-transition: all 0.3s ease 0s;
+		-ms-transition: all 0.3s ease 0s;
+		 -o-transition: all 0.3s ease 0s;
+			transition: all 0.3s ease 0s;
+
+		}
+
+	.top-nav{left:-320px;
+	-webkit-transition: all 0.3s ease 0s;
+	   -moz-transition: all 0.3s ease 0s;
+		-ms-transition: all 0.3s ease 0s;
+		 -o-transition: all 0.3s ease 0s;
+			transition: all 0.3s ease 0s;
+	}
+	.top-nav.selected {left:0;}
+
+
+	/* 모바일 메뉴 닫기 버튼 애니메이션 */
+	.mobile-close {position:fixed; right:-30px;top:14px;opacity:0;
+	-webkit-transition: all 0.3s ease 0s;
+	   -moz-transition: all 0.3s ease 0s;
+		-ms-transition: all 0.3s ease 0s;
+		 -o-transition: all 0.3s ease 0s;
+			transition: all 0.3s ease 0s;}
+			
+	/* 모바일 닫기버튼 위치  */
+	.mobile_menu_open .mobile-close {right:4%; z-index: 9999; opacity:1;}
+	.mobile-close a{font-size:0;width:25px;height:25px; display:block;}
+	/* 모바일 닫기버튼 css로 제작 */
+	.mobile-close a:before,
+	.mobile-close a:after{position: absolute;left: 15px;content:'';height: 100%;width: 3px;background-color: #000;}
+	.mobile-close a:before {transform: rotate(45deg);}
+	.mobile-close a:after  {transform: rotate(-45deg);}
+
+	.mobile_top_nav.selected .mobile-close {opacity:1;left:285px;}
+
+
+	/*gnb 방식변경*/
+	.top-nav {border-top:1px solid #cbcbcb;width:320px;border-bottom:0;border-top:0;}
+	.top-nav__fav2 {top:0;width:310px;left:0;padding-left:10px;background-color:#fff;padding-top:46px;border-bottom:1px solid #ddd;height:35px;}
+	.top-search {top:10px;left:10px;width:243px;}
+	.top-search__in {border:1px solid #e0e0e0;padding-right:0;}
+	/*
+	.gnb {opacity:0;background-color:#fff;top:136px;width:100%;border-top:1px solid #cbcbcb;border-bottom:1px solid #cbcbcb;}
+
+	*/
+	.gnb-ul {width:100%;display:block;padding-right:0;}
+	.gnb-menu {width:100%;display:block;border-right:0px;}
+	.gnb-menu > a {text-align:left;line-height:30px;height:30px;padding-left:15px;}
+	.sub-nav{width:auto;border:0;background-color: #f7f7f7;text-align:left;}
+	.gnb-menu.over .sub-nav {border:0px solid #a82923;background-color: #96705d;}
+	.sub-nav__box__list a span {color:#666666;background-image:none !important;font-size:17px;}
+	.sub-nav__box__list a span br {display:none;}
+	#gnb_nav_mobile .sub-nav {height:0;visibility:hidden;}
+	#gnb_nav_mobile li.gnb-menu.selected .sub-nav{height:auto;visibility:visible;}
+
+	#gnb_nav_mobile.selected {display:block;opacity:1;}
+	.gnb.selected {display:block;opacity:1;padding-bottom:80px;}
+	.top-nav.selected {display:block;opacity:1;}
+	
+	/* 퀵메뉴 */
+	#quick {display: none;}
+	
+	
+	/* assets 리뉴얼 */
+	#container {display:block !important; margin-top:0px;}
+	#footer {padding:0;}
+	/* assets 리뉴얼 */
+	
+	/* 메인 컨텐츠 */
+	#container #content .mains {padding-top: 0!important; padding-bottom:10px!important;}
+	.mains .grid1 > .column.one {display: none;}
+	
+	/* 가족친화인증 외 3개 컨텐츠 내용 */
+	.mains .grid1 > .column.two {width: 100%; float:none;}
+	/* 바로가기 아이콘 */
+	.boxs7 .icon {z-index: 1; opacity: 0.2; width: 22%; }
+
+	/* 가족친화 ~~~~ 출입국 우대카드 배너 */
+	.mains .grid2 .column.two {display: none;}
+	
+	/* 공지사항, 최신게시물 */
+	/* 공지사항  show , 최신게시물 display none */
+	
+	/* 2줄이상 넘어가면 ... 표기 */
+	.boxs7 .txt{ max-height:44px; -webkit-line-clamp: 2;}
+		
+	.mains .grid2 .col {width:100%;  float:none !important;}
+	.mains .grid2 .col.frs {display: none; }
+	.mains .grid2 .column.one > .inner{padding: 3% 2%; }
+								.boards1 {padding:0;}
+								.boards1 .more {top:6px;}
+	
+	/* 홍보자료 display none*/
+	.mains .box{display: none;}
+	
+	
+	/**** footer */
+	#footer .containers1 > .inner {padding: 15px; }
+	
+	/* 여성가족부, 진흥원, 경영인증원 로고 */
+	#footer .one {position: absolute; top: 43px; right: 16px; }
+	
+	/* 이용약관 ~~~ 찾아오시는길*/
+	#footer .two {padding-left: 0;}
+	/* 찾아오시는길 삭제 */
+	#footer .two .list li:last-child{display: none;}
+	
+	/* 패밀리사이트 */
+	.ss1.sbholder {width:72% !important; height: auto;}
+	/* 화살표 버튼 */
+	.ss1.sbholder .btn{width: auto; padding:12% 11%;}
+	#footer .col.three {text-align: left; margin-top: 0px; width: 30%;}
+	#footer .btn-family {width: auto; height: auto; margin-left:1%; padding:5.6% 6%; }
+	
+	/* 인증마크 */
+	.award-banner{left: 50%; bottom:10px; margin-left:124px; width:55px; height: auto;}
+	.award-banner a{}
+	.award-banner a>img{width: 100%;}
+	.award-banner>img{width: 100%; margin-top:15px!important; }
+	
+	/**** footer 끝*/
+	
+	
+	/**서브 페이지 관련 시작***********************************/
+	#container #twoColWrap #content .inner {padding-top: 30px;}
+	#content .tbls .titles1 ,#content .tbls p{display: none ;} /*제목,서브내용 */
+	.tbls.wa {display: table!important} /* 공지사항부분, 등록일,첨부파일등 제목 */
+	.tabs2.o1 {display: none; }
+	
+	/* 서브페이지 공통 */
+	/* 뷰어 프로그램 다운로드 */
+	.viewer_download_wrap {display: none;}
+	
+	/* 테이블 내용 좌우 스크롤 가능하게 변경 */
+	.tb_type1 .tables1{min-width: 820px; overflow-x: scroll;}
+	
+	
+	/* sub페이지 테이블 오버플로우 스크롤 시 박스 그림자 생성*/
+	.shadow-right:after {
+		position:absolute;	top:0;	left:100%;	width:50px;	height:100%;
+		border-radius:10px 0 0 10px / 50% 0 0 50%;	box-shadow:-5px 0 10px rgba(0, 0, 0, 0.25);	content:'';
+	}
+	
+	.diagrams2 .spot.one {margin-left:-46px !important;}
+	
+	.diagrams2 .cont.two {top:-15%; margin-left:60px; }
+	.diagrams2 .cont.two .lh1{background: rgba(255,255,255, 0.6); padding:10px 10px; border-radius: 13px; }
+	.diagrams2 .spot.two {top:50%; left:50%; height:auto; margin-top:-90px !important; margin-left:-18px !important; width:auto;}
+	
+	.diagrams2 .spot.three {left:50% !important; top:70%; width:auto; height:auto; }
+	.diagrams2 .cont.three {padding-right:0!important; margin-top:0 !important; margin-left:-50px; }
+	.diagrams2 .cont.three .lh1{background: rgba(255,255,255, 0.6); padding:10px 10px; border-radius: 13px; }
+	.diagrams2 .cont.three ul.buls1.r > li {text-align:left; padding-right:0; padding-left:15px;}
+	.diagrams2 .cont.three ul.buls1.r > li::before {left:0;}
+	
+	.diagrams2 .spot.four {left:50% !important; top:70%; width:auto; height:auto; margin-left:9% !important;}
+	.diagrams2 .cont.four {right: 1%; bottom:11%;}
+	.diagrams2 .cont.four .lh1{background: rgba(255,255,255, 0.6); padding:10px 10px; border-radius: 13px; }
+	
+	/*가족친화인증 관련 페이지 */
+	.title4, .title5, p.buls1, .ci_down_wrap, .lists3, .ars a.js-pop-btn{display: none;}
+	.titles1 {font-size:1.6rem;}
+	
+	/* 컨설팅 내용 */
+	.tabs2 {display: none;}
+	
+	/* 공지사항 iframe으로 유툽영상 연결 관련 소스 정리 */
+	.details1 > .cont iframe{height:400px;}
+	/* 공지사항 iframe으로 유툽영상 연결 관련 소스 정리 */
+	
+	/*가족친화인증 자체점검 관련 페이지 */
+	.poas {top:50%; left:5%; margin-top:-65px;}
+	
+	/** 자체점검 절차 **/
+	.imgWrap img{width:100%;}
+	 #container #twoColWrap #content .inner {padding-bottom: 30px; }
+	
+	/* 게시판 안쪽 img 사이즈 // 공통 */
+	.details1  .cont p img{width:100%!important; height:auto!important;}
+	
+	
+	/**서브 페이지 관련 끝***********************************/
+					  
+}/*@media screen and (min-width:1px) and (max-width:768px) 끝*/
+
+
+@media screen and (min-width:1px) and (max-width:639px) {
+	
+	/* 가족 친화 인증 미들 컨텐츠 */
+	.diagrams2 .spot.three{top:60%; left:43% !important;}
+	.diagrams2 .cont.three {top:70%; left:13%;}
+	
+	/* 서브페이지 시작 ***************************/
+	
+	/* 가족친화 인증 */
+	.diagrams2 .spot.four{top:66%; margin-left:13% !important;}
+	.diagrams2 .cont.four {bottom:-11%}
+	
+	
+	/* 공지사항 iframe으로 유툽영상 연결 관련 소스 정리 */
+	.details1 > .cont iframe{height:340px;}
+	/* 공지사항 iframe으로 유툽영상 연결 관련 소스 정리 */
+	
+	/* 서브페이지 끝 ***************************/
+	
+	
+	
+	/**** footer */
+	/* footer 전체 박스 */
+	#footer .containers1{min-height:200px; }
+	#footer .containers1 > .inner {padding: 2%;}
+	
+	/* 이용약관 ~~~ 찾아오시는길 */
+	#footer .col {padding-left:0!important;}
+	#footer .two .list li{padding:0 20px;}
+	
+	/* 주소 */
+	#footer address, #footer .copyright{font-size:0.7rem }
+	
+	/* 여성가족부, 진흥원, 경영인증원 로고 */
+	#footer .one {display: none;}
+	
+	
+	/* 패밀리사이트 */
+	#footer .col.three {position:absolute; left:50%; margin-left:57px;  width: 40%;}
+	#footer .col.three:after {display: block; content: ""; clear: both;}
+	#footer .col.three .ss1.sbholder {width: 70% !important;}
+	#footer .col.three .ss1.sbholder .selected {font-size: 0.7rem; }
+	#footer .col.three .ss1.sbholder .btn {padding: 11%;}
+	
+	/* 인증마크 */
+	.award-banner{margin-left:0; bottom:8px; left:unset; right:24px; width:140px;}
+	.award-banner:after{content: ""; display: block; clear: both;}
+	.award-banner a{display: block; float: left; width: 46%;}
+	.award-banner a:nth-child(1){margin-right: 8%}
+	.award-banner a img{width: 100%}
+	.award-banner a:nth-child(2){width:auto;  height: 45px;}
+	.award-banner a:nth-child(2) img{height: 100%}
+	
+	/**** footer 끝*/
+	
+}
+
+/*@media screen and (min-width:1px) and (max-width:540px) */
+@media screen and (min-width:1px) and (max-width:540px) {
+	
+	/* 푸터 */
+	/* 푸터 사이즈 */
+	#footer .containers1 {min-height:215px;}
+	
+	/* 패밀리 사이트 */
+	#footer .col.three {left:2%; bottom:-40px; margin-left: 0;}
+	/* 패밀리 사이즈 버튼 */
+	#footer .col.three .ss1.sbholder .btn {width: auto; padding: 13% 11%}
+	
+	/* 인증 마크 */
+	.award-banner {bottom:-42px; left:50%; right:0;}
+	
+	
+	/* 서브페이지 컨텐츠 **/
+	/*가족친화인증 자체점검 관련 페이지 */
+	/** 큰 제목 밑 서브 내용 */
+	.boxs6 .box6Wrap{padding:115px 10px 15px 10px;}
+	.poas {top:50%; margin-top:-29%; left: 50%; margin-left:-8%; width:20% }
+	.poas img {width:100%;}
+	
+}
+/*@media screen and (min-width:1px) and (max-width:540px) */
+
+/*@media screen and (min-width:1px) and (max-width:500px) */
+@media screen and (min-width:1px) and (max-width:500px) {
+	
+	#container #twoColWrap #content .inner {padding-bottom: 20px; }
+	
+	.top_pop {display:none}
+	/* 메인컨텐츠 높이 조정 */
+	#container{min-height: auto;}
+	#container #content .mains {padding-bottom: 0px !important;}
+	/* 메인컨텐츠 높이 조정 */
+	
+	
+	/* 가족친화 인증 외 3개 컨텐츠 */
+	.boxs7 .tit {font-size:2rem;}
+	/* 2줄이상 넘어가면 ... 표기 */
+	.boxs7 .txt {max-height:65px; -webkit-line-clamp: 2; }
+	/* 아이콘 */
+	.boxs7 .icon {display:none; width:auto; right: 10px; z-index: 1; opacity: 0.2;}
+	/* 바로 가기 사이즈 */
+	.btns.b {height:auto;line-height:1;padding:4px 15px;}
+	/* 바로가기 색상 */
+	.mains .grid1 .column .row:nth-child(1) .col:nth-child(1) .boxs7 > .inner .btns.b { background: #dfe7f6;}
+	.mains .grid1 .column .row:nth-child(1) .col:nth-child(2) .boxs7 > .inner .btns.b { background: #fff5e0;}
+	.mains .grid1 .column .row:nth-child(2) .col:nth-child(1) .boxs7 > .inner .btns.b { background: #dbeef9;}
+	.mains .grid1 .column .row:nth-child(2) .col:nth-child(2) .boxs7 > .inner .btns.b { background: #d6eef1;}
+	
+	/* 공지사항 줄이기 */
+	.mains .grid2 .column.one > .inner{padding: 4% 3%; }
+	.mains .grid2 .col {max-height: 135px; overflow: hidden;}
+	.mains .grid2 .col .boards1 {width:100%;}
+	.boards1 .cont{padding-top:8px}	
+	
+	/* 공지사항 타이틀 */
+	.boards1 .heading {min-height: 0; }
+	/* 공지사항 화살표 아이콘 */
+	.boards1 .more{top:0px; }
+	
+	/* 공지사항 글자 사이 간격*/
+	.boards1 .tit {font-size: 2rem;}
+	.boards1 .list li{padding:5px 0 5px 13px}
+	.boards1 .list li a {font-size: 15px; }
+	.boards1 .list li:before {top:1.1em;}	
+	
+	/* 가족친화인증 자체점검 상단 이미지 */
+	
+	/*가족친화인증 자체점검 관련 페이지 */
+	.poas {top:50%; margin-top:-35%; left:50%; margin-left: -8%;}
+
+	
+	/**** footer */
+	/* footer 전체 박스 */
+	#footer .containers1 > .inner {padding: 2%;}
+	
+	/* 이용약관 ~~~ 찾아오시는길 */
+	#footer .col {padding-left:0!important;}
+	#footer .two .list li{padding:0 20px;}
+	
+	/* 주소 */
+	#footer address, #footer .copyright{font-size:1.1rem }
+	
+	/* 여성가족부, 진흥원, 경영인증원 로고 */
+	#footer .one {display: none;}
+	
+	/* 패밀리사이트 */
+	#footer .col.three {width: 50%; bottom: -32px; margin-left: 0; }
+	#footer .col.three:after {display: block; content: ""; clear: both;}
+	#footer .col.three .ss1.sbholder {width: 70% !important; height:30px; }
+	#footer .col.three .ss1.sbholder .selected {font-size: 1.2rem; height:100%; line-height:2.6em;}
+	#footer .col.three .ss1.sbholder .btn {width:20%; padding: 15px 0;}
+	/* 이동버튼 */
+	#footer .btn-family {height:auto; padding:2.5%; }
+	.ss1.sbholder .list {bottom: 30px; width:148px;}
+	
+	/* 인증마크 */
+	.award-banner{width:auto; height:30px; left:68%; bottom:-30px;}
+	.award-banner a {}
+	.award-banner a:nth-child(1) {width:auto; display: inline-block; margin-right: 8px;}
+	.award-banner a img,
+	.award-banner a:nth-child(2) img  {width: auto; height: 30px;}
+	
+	/**** footer 끝*/
+	
+	
+	
+	
+	/* 서브페이지 시작 ***************************/
+	
+	.diagrams2 {background-image: none; margin-top:15px !important;}
+	/* 그래프 공통 설정 */
+	.diagrams2 .spot .title{color:#000; text-align: left; padding-left: 12px;}
+	.diagrams2 .spot, .diagrams2 .cont,
+	.diagrams2 .spot.one, .diagrams2 .spot.two, .diagrams2 .spot.three, .diagrams2 .spot.four,
+	.diagrams2 .cont.one, .diagrams2 .cont.two, .diagrams2 .cont.three, .diagrams2 .cont.four
+	{position: relative; margin-left: 0 !important; margin-top: 0 !important; padding-left: 0; top:unset !important; bottom:unset; left:unset!important; right:unset;}
+	
+	/*근로자와 기업 사회의 상생결영전략 br태그 무시하기 */
+	.diagrams2 .spot.one {margin-bottom:15px;}
+	.diagrams2 .spot.one .title br:first-child {display: none;} 
+	
+	/* 기업,근로자,사회 */
+	.diagrams2 .spot.two,.diagrams2 .spot.three,.diagrams2 .spot.four{padding:5px 0;display: block;}
+	.diagrams2 .spot.two {background: #fdd9a4;}
+	.diagrams2 .spot.three {background: #dfd9d7;}
+	.diagrams2 .spot.four {background: #a9dde3;}
+	
+	
+	/** 가족친화인증 자체 점검 관련페이지  */
+	.titles1 {font-size:1.3rem;}
+	
+	/* 홍보자료 */
+	/* 검색 부분 */
+	.bcs1{margin-top:25px!important; } 
+	.bcs1 .inners1{padding:15px; }
+			.is1 {width:40%;}
+			.btns.a {padding:7px 10px;}
+				
+	/* 서브페이지 끝 ***************************/
+	
+	
+
+}/*@media screen and (min-width:1px) and (max-width:500px) 끝*/
+
+
+
+
+@media screen and (min-height:1px) and (max-height:852px) { 
+	/* 푸터 높이  */
+	#footer .containers1 {min-height: 250px;}
+	
+}
+@media screen and (min-width:1px) and (max-width:425px) {
+	
+	/* 푸터 높이 */
+	#footer .containers1 {min-height: 210px;}
+	
+	
+	
+	/*가족친화인증 자체점검 관련 페이지 */
+	.poas { margin-top:-44%; }
+	
+	
+	
+}
+
+/* @media screen and (min-width:1px) and (max-width:376px) */
+@media screen and (min-width:1px) and (max-width:376px) {
+	/* 모바일 메뉴 */
+	.mobile_top_nav {right:1.8%}
+	 
+	/* 모바이 메뉴 펼쳐짐 */
+	.mobile_top_nav__in {width:80%;}
+	.mobile_menu_open .mobile-close {right:9%;}
+	.mobile-close a:before, .mobile-close a:after {left: 10px;}
+	 
+	/* 로그인 ~~ 회원가입  : 아이디/비밀번호찾기 display none; */
+	.mobile_menu_open #header .info-box{right:80px; width: auto;}
+	.mobile_menu_open #header .info-box .list li.ic2{display: none;}
+	
+	/* 모바일 메뉴 상단 */
+	#gnb_nav_mobile.selected {padding-top: 55px; }
+	
+	
+	/* 가족친화 인증 외 3개 컨텐츠 */
+	/* 컨텐츠 박스 사이즈 */
+	.mains .grid1 .column.two .row:first-child {margin-bottom:9px;}
+	/* 컨텐츠 제목 */
+	.boxs7 .tit {letter-spacing:-2px !important; font-size:1.1em; white-space: nowrap; text-overflow: ellipsis; overflow: hidden;}
+	/* 2줄이상 넘어가면 ... 표기 */
+	.boxs7 .txt {height:40px; -webkit-line-clamp: 2;}
+	/* 바로가기 버튼 */
+	.boxs7 > .inner .mts15{margin-top: 10px !important;}
+	.btns.b {height: auto; padding: 2% 4%; border-radius: 30px; line-height: unset; }
+	
+	/* 공지사항 */
+	/* 송지사항 전체 사이즈 */
+	.mains .grid2 .column.one > .inner {margin:0; }
+	/* 공지사항 타이틀 */
+	.boards1 .tit {font-size: 1.3em;}
+	.boards1 .heading {padding-bottom: 5px;}
+	/* 공지사항 내용 */
+	.boards1 .cont {padding-top: 5px;}
+	.mains .grid2 .col{height: 110px; }
+	.boards1 .list li {padding: 5px 0 0 13px;}
+	.boards1 .list li a{font-size: 1.2rem; }
+	/* 공지사항 더보기 버튼 */
+	.btns1 { width: 20px; height: auto; overflow: unset;background-size: contain; font-size:0; }
+	
+	
+	
+	/* footer */
+	#footer .col.two .list {margin-bottom: 10px !important;}
+	#footer address, #footer .copyright {font-size:1rem;}
+	
+	/* 이용약관 ~ 찾아오시는길 */
+	#footer .two .list li a {font-size:1.1rem; }
+	
+	/* 패밀리 사이트 */	
+	#footer .btn-family{font-size:0.6rem; padding:4.5%;}
+	
+	/* 인증마크 */
+	.award-banner {margin-left:15px; height:auto; bottom:-46px; }
+	
+	.boxs1 > .tbls > .cell {display:block !important;}
+	
+	/* 서브페이지 시작 ***********/
+	/*가족친화인증 자체점검 관련 페이지 */
+	.poas { top:4%; margin-top:0; }
+	/* 서브페이지 끝 ***********/
+	
+}/* @media screen and (min-width:1px) and (max-width:374px) */
+
+
+
+@media screen and (min-width:1px) and (max-width:320px) {
+	/* 공지사항 제목 ... 표기 */
+	.boards1 .list li {white-space:nowrap; text-overflow: ellipsis; overflow: hidden;}
+	
+	/* 푸터 */
+	#footer .two .list li {padding : 0 16px; }
+	
+
+
+	/* 서브페이지 시작 ***********/
+	/* 홍보자료 */
+	/* 검색 부분 */
+	.bcs1 .inners1{padding:9px; }
+	.bcs1 .ss2{font-size: 0.4em; padding:2px; width:29%}
+		  .is1 {width:40%;}
+		  .btns.a {font-size:0.7rem; padding:6px 6px;}	
+	
+	
+	/* 서브페이지 끝 ***********/
+	
+}
+
+
+
+
+
+@media screen and (min-height:1px) and (max-height:658px) { 
+	/* footer 전체 박스 */
+	#footer .containers1 {min-height: 250px;}
+	
+}
+

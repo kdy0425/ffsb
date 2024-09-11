@@ -1,0 +1,1131 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html lang="ko" class="ko ie8"><![endif]-->
+<!--[if IE 9]><html lang="ko" class="ko ie9"><![endif]-->
+<!--[if !IE]><!--><html lang="ko" class="ko modern"><!--<![endif]-->
+<head>
+<title>로그인 | 가족친화지원사업</title>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="가족친화제도를 모범적으로 운영하는 기업 및 공공기관에 대하여 심사를 통해 인증을 부여하는 제도" />
+<meta name="keywords" content="가족친화인증" />
+<!-- KaKao & Facebook 공유 링크 -->
+<meta name="og:type" content="website" />
+<meta name="og:title" content="로그인 | 가족친화지원사업" />
+<meta name="og:url" content="" />
+<meta name="og:description" content="" />
+<meta name="og:image" content="http://www.ffsb.kr/common/img/common/sns_logo.png" />
+<meta name="og:article:author"	content="다누리"/>
+<!-- //KaKao & Facebook 공유 링크 -->
+<!-- twitter 공유 링크 -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="로그인 | 가족친화지원사업">
+<meta name="twitter:url" content="">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="http://www.ffsb.kr/common/img/common/sns_logo.png">
+<!-- //트위터 공유 링크 -->
+<link type="text/css" rel="stylesheet" href="https://www.ffsb.kr/common/style/css/jquery-ui.css?ver=202301" />
+<link type="text/css" rel="stylesheet" href="../css/ffm_v2.css" />
+<link type="text/css" rel="stylesheet" href="../css/content.css" />
+<link type="text/css" rel="stylesheet" href="https://www.ffsb.kr/common/style/assets/css/swiper.css?ver=202301" />
+<!--[if lt IE 9]>
+  <script src="https://www.ffsb.kr/common/js/vender/respond.min.js"></script>
+<![endif]-->
+<script src="https://www.ffsb.kr/common/js/vender/jquery-1.12.4.min.js"></script>
+<script src="https://www.ffsb.kr/common/js/vender/jquery.easing.1.3.js"></script>
+<script src="https://www.ffsb.kr/common/js/vender/placeholders.min.js"></script>
+<script src="https://www.ffsb.kr/common/js/jquery-ui.min.js"></script>
+<script src="https://www.ffsb.kr/common/js/common.js?ver=202301"></script>
+<script src="https://www.ffsb.kr/common/js/ui.js"></script>
+<script src="https://www.ffsb.kr/common/js/jquery.validate.js"></script>
+<script src="https://www.ffsb.kr/ubireport/ajax/js4/ubiajax.js"></script>
+<!--<script type="text/javascript" src="https://www.eprivacy.or.kr/seal/mark.js"></script>-->
+<script src="https://www.ffsb.kr/common/js/jquery.actual.min.js"></script><!-- 박스 그림자 효과 -->
+<script src="https://www.ffsb.kr/common/js/mainDh.js"></script><!-- 화면 제이쿼리 -->
+</head>
+<body>
+<ul id="skip">
+	<li><a href="#content" onclick="document.getElementById('content').tabIndex = -1;document.getElementById('content').focus();return false;">본문 바로가기</a></li>
+	<!-- <li><a href="#sideBar" onclick="document.getElementById('sideBar').tabIndex = -1;document.getElementById('sideBar').focus();return false;">왼쪽 바로가기</a></li> --> <!-- 20180103 접근성 수정 -->
+	<li><a href="#footer" onclick="document.getElementById('footer').tabIndex = -1;document.getElementById('footer').focus();return false;">하단 바로가기</a></li>
+</ul>
+<div id="wrap">
+	<!-- 상단헤더 -->
+<!-- 팝업 jsp END -->
+<!-- 날짜				작업자		내용  -->
+<!-- 2022.05.24		이다혜		모바일 메뉴 수정, 고정 style 수정  -->
+<script type="text/javaScript">
+$(document).ready(function() {
+	$(".js-pop-btn img").css("border", "2px solid rgba(0,0,0,0)");
+	$(".js-pop-btn img").css("border-radius", "3px");
+	$(".js-pop-btn").focusin(function() {
+		$(".js-pop-btn img").css("border", "solid 2px black");
+	});
+	$(".js-pop-btn").focusout(function() {
+		$(".js-pop-btn img").css("border", "2px solid rgba(0,0,0,0)");
+	});
+	// 검색클릭시 검색함수 호출
+	$("#headSearchSubmit").click(function(){
+		funcHeadSearchSubmit();
+	});
+	$("#headSearchText").keydown(function(e) {
+		if(e.keyCode == 13) {
+			funcHeadSearchSubmit();
+		}
+	});
+});
+function funcHeadSearchSubmit() {
+	if($("#headSearchText").val().trim() == "") {
+		alert("검색어를 입력해주세요.");
+		$("#headSearchText").focus();
+	} else {
+		var frm = document.headFrm;
+		frm.action="/search/search.do";
+		frm.submit();
+	}
+}
+$focusOld = $(".js-pop-btn");
+$(document).on("click",".js-pop-sns .js-close",function(e){
+	$(".js-pop-btn").focus();
+});
+	var timer = 3599;	//로그인 유지 시간 1당 1초
+	$(function(){
+		var zoom = 100;
+		var max = 200;
+		var min = 80;
+		$("#browser_plus").on("click", function(e){
+			e.preventDefault();
+			if(zoom>=max){
+				alert('최대 확대입니다.');
+				return;
+			}else{
+				$("body").css("zoom", (zoom+=20)+"%");
+			}
+		});
+		$("#browser_minus").on("click", function(e){
+			e.preventDefault();
+			if(min>=zoom){
+				alert('최소 확대입니다.');
+				return;
+			}else{
+				$("body").css("zoom", (zoom-=20)+"%");
+			}
+		});
+		if("" != null && "" != "") {
+			if("/" == "mypageJudge/certAwardList.do" || "/" == "mypage/consultantSummary.do"){
+				timer = 7199;
+			}
+			//로그인 시간 감소
+			setInterval(function() {
+				var hours = parseInt(timer / 3600, 10);
+				var minutes = parseInt(timer / 60 % 60, 10);
+		        var seconds = parseInt(timer % 60, 10);
+		        var strHours = hours > 0 ? hours + ":" : "";
+		        minutes = minutes < 10 ? "0" + minutes : minutes;
+		        seconds = seconds < 10 ? "0" + seconds : seconds;
+				$('#time_count').html("남은시간 " + strHours + minutes + ":" + seconds);
+				if(timer == 179){	//3분남을 시 연장 알림창.
+					confirm_login_add();
+				}
+		 		if(timer == 0){
+					var url = new URL(location.href);
+					if(url.pathname == "/selfChk/selfChkRqn.do"){	//자체점검 등록 시 자동저장
+						fnAutoTempSaveBtn();
+					}else{
+			 			location.href = "/login/logout.do";
+						alert("일정시간동안 사용하지 않아 로그아웃되었습니다.\n계속 이용을 원하시면 로그인 하시기 바랍니다.");
+					}
+				}
+				timer = timer - 1;	//-1초
+			}, 1000); // 1초마다 반복
+		}
+		function confirm_login_add(){
+			var msg = "로그인 시간을 연장하시겠습니까?";
+			jQuery("#confirm-msg").text(msg);
+			jQuery("#dialog-confirm").dialog({
+				resizable: false,
+				height:250,
+				width:400,
+				modal: true,
+				buttons: {
+					"확인": function() {
+						timer = 1800;                               //여기에 확인 눌렀을때 실행되는 event 정의 하면됨.
+						jQuery( this ).dialog( "close" );
+					},
+					"취소": function() {
+						jQuery( this ).dialog( "close" );
+					}
+				}
+			});
+			$('.ui-dialog .ui-dialog-titlebar-close').html('<span class="ui-button-icon ui-icon ui-icon-closethick"></span> <span class="ui-button-icon-space"> </span>');
+			$('.ui-dialog').css("font-size", "13px");
+		}
+	});
+	function fnExtension(){
+		if("/" == "mypageJudge/certAwardList.do" || "/" == "mypage/consultantSummary.do"){
+			timer = 7199;
+		}else{
+			timer = 3599;
+		}
+	}
+</script>
+	<div id="header">
+        <span class="nav_bg"></span>
+        <div class="hd_top">
+            <div class="hd_inner">
+                <a href="https://www.ffsb.kr/"><div id="logo">가족친화사업</div></a>
+                <div class="hd_info">
+			            	<div class="item txt"><a href="https://www.ffsb.kr/login/login.do">로그인</a></div>
+			            	<div class="item txt"><a href="https://www.ffsb.kr/login/idFind.do">아이디찾기</a></div>
+			            	<div class="item txt"><a href="https://www.ffsb.kr/mem/compUserJoin.do">회원가입</a></div>
+                </div>
+            </div>
+            <script>
+            $(".hd_info .mypage").click(function (event) {
+                event.stopPropagation();
+                if ($("#mypage_ly:visible").length > 0) {
+                    $(".info_ly").hide();
+                }else{
+                    $(".info_ly").hide();
+                    $("#mypage_ly").show();
+                }
+                $(".sc_form").hide();
+            });
+            $(".hd_info .member").click(function (event) {
+                event.stopPropagation();
+                if ($("#member_ly:visible").length > 0) {
+                    $(".info_ly").hide();
+                }else{
+                    $(".info_ly").hide();
+                    $("#member_ly").show();
+                }
+                $(".sc_form").hide();
+            });
+            $(document).click(function (event) {
+                if ($(event.target).closest(".info_ly").length === 0) {
+                    if ($(".info_ly:visible").length > 0) {
+                        $(".info_ly").hide();
+                    }
+                }
+            });
+            </script>
+        </div>
+        <div class="hd_bottom">
+            <div class="hd_inner">
+                <div id="nav">
+                    <ul>
+	                        <li><a id="topMenu1" href="https://www.ffsb.kr/ffm/ffmCertBusiGuide.do?menuSeq=1146">가족친화사업</a>
+	                            <div class="in_wrap">
+			                                <ul class="menuList1">
+			                                    <li id="parentMenuSeq146"><a href="https://www.ffsb.kr/ffm/ffmCertBusiGuide.do?menuSeq=1146">가족친화사업안내</a>
+			                                    </li>
+			                                </ul>
+			                                <ul class="menuList1">
+			                                    <li id="parentMenuSeq151"><a href="https://www.ffsb.kr/ffm/ffmCertStatus.do?menuSeq=1151">인증기업·기관현황</a>
+				                                        <ul>
+				                                            		<li menuSeq="151"><a href="https://www.ffsb.kr/ffm/ffmCertStatus.do?menuSeq=1151">인증기업 현황</a></li>
+				                                            		<li menuSeq="152"><a href="https://www.ffsb.kr/ffm/ffmCertCompSearch.do?menuSeq=1152">인증기업 정보</a></li>
+				                                        </ul>
+			                                    </li>
+			                                </ul>
+			                                <ul class="menuList1">
+			                                    <li id="parentMenuSeq153"><a href="https://www.ffsb.kr/information/incentive1.do?menuSeq=1153">인증기업인센티브</a>
+				                                        <ul>
+				                                            		<li menuSeq="153"><a href="https://www.ffsb.kr/information/incentive1.do?menuSeq=1153">기업 인센티브</a></li>
+				                                            		<li menuSeq="154"><a href="https://www.ffsb.kr/information/incentive2.do?menuSeq=1154">근로자 인센티브</a></li>
+				                                        </ul>
+			                                    </li>
+			                                </ul>
+			                                <ul class="menuList1">
+			                                    <li id="parentMenuSeq155"><a href="https://www.ffsb.kr/information/immgCardGuide.do?menuSeq=1155">출입국우대카드</a>
+				                                        <ul>
+				                                            		<li menuSeq="155"><a href="https://www.ffsb.kr/information/immgCardGuide.do?menuSeq=1155">출입국우대카드 안내</a></li>
+				                                            		<li menuSeq="156"><a href="https://www.ffsb.kr/information/immgCardReqWrite.do?menuSeq=1156">출입국우대카드 신청</a></li>
+				                                        </ul>
+			                                    </li>
+			                                </ul>
+			                                <ul class="menuList1">
+			                                    <li id="parentMenuSeq200"><a href="https://www.ffsb.kr/customer/location1.do?menuSeq=1200">찾아오시는길</a>
+			                                    </li>
+			                                </ul>
+	                            </div>
+	                        </li>
+	                        <li><a id="topMenu2" href="https://www.ffsb.kr/ffm/ffmCertSummary.do?menuSeq=2157">가족친화인증</a>
+	                            <div class="in_wrap">
+			                                <ul class="menuList2">
+			                                    <li id="parentMenuSeq157"><a href="https://www.ffsb.kr/ffm/ffmCertSummary.do?menuSeq=2157">인증제도안내</a>
+				                                        <ul>
+				                                            		<li menuSeq="157"><a href="https://www.ffsb.kr/ffm/ffmCertSummary.do?menuSeq=2157">인증개요</a></li>
+				                                            		<li menuSeq="158"><a href="https://www.ffsb.kr/ffm/ffmCertProcess.do?menuSeq=2158">인증절차 및 추진일정</a></li>
+				                                        </ul>
+			                                    </li>
+			                                </ul>
+			                                <ul class="menuList2">
+			                                    <li id="parentMenuSeq163"><a href="https://www.ffsb.kr/ffm/ffmCertEstLaw.do?menuSeq=2163">평가배점기준</a>
+				                                        <ul>
+				                                            		<li menuSeq="163"><a href="https://www.ffsb.kr/ffm/ffmCertEstLaw.do?menuSeq=2163">법규 요구사항</a></li>
+				                                            		<li menuSeq="164"><a href="https://www.ffsb.kr/ffm/ffmCertEstNew.do?menuSeq=2164">신규인증</a></li>
+				                                            		<li menuSeq="165"><a href="https://www.ffsb.kr/ffm/ffmCertEstRe.do?menuSeq=2165">유효기간 연장·재인증</a></li>
+				                                            		<li menuSeq="166"><a href="https://www.ffsb.kr/ffm/ffmCertEstReg.do?menuSeq=2166">가·감점</a></li>
+				                                        </ul>
+			                                    </li>
+			                                </ul>
+			                                <ul class="menuList2">
+			                                    <li id="parentMenuSeq167"><a href="https://www.ffsb.kr/ffm/ffmCertScoreSelfDiag1.do?menuSeq=2167">예상점수미리보기</a>
+				                                        <ul>
+				                                            		<li menuSeq="167"><a href="https://www.ffsb.kr/ffm/ffmCertScoreSelfDiag1.do?menuSeq=2167">대기업·공공기관</a></li>
+				                                            		<li menuSeq="168"><a href="https://www.ffsb.kr/ffm/ffmCertScoreSelfDiag2.do?menuSeq=2168">중소기업</a></li>
+				                                        </ul>
+			                                    </li>
+			                                </ul>
+			                                <ul class="menuList2">
+			                                    <li id="parentMenuSeq161"><a href="https://www.ffsb.kr/ffm/ffmPresentMain.do?menuSeq=2161">설명회참여신청</a>
+			                                    </li>
+			                                </ul>
+			                                <ul class="menuList2">
+			                                    <li id="parentMenuSeq169"><a href="https://www.ffsb.kr/ffm/ffmCertRqnGuide.do?menuSeq=2169">가족친화인증신청</a>
+				                                        <ul>
+				                                            		<li menuSeq="169"><a href="https://www.ffsb.kr/ffm/ffmCertRqnGuide.do?menuSeq=2169">신청안내</a></li>
+				                                            		<li menuSeq="170"><a href="https://www.ffsb.kr/ffm/ffmCertRqnNew.do?fcrGbn=01&menuSeq=2170">신규 인증 신청</a></li>
+				                                            		<li menuSeq="171"><a href="https://www.ffsb.kr/ffm/ffmCertRqnNew.do?fcrGbn=02&menuSeq=2171">유효기간 연장 신청</a></li>
+				                                            		<li menuSeq="172"><a href="https://www.ffsb.kr/ffm/ffmCertRqnNew.do?fcrGbn=03&menuSeq=2172">재인증 신청</a></li>
+				                                        </ul>
+			                                    </li>
+			                                </ul>
+	                            </div>
+	                        </li>
+	                        <li><a id="topMenu3" href="https://www.ffsb.kr/consulting/consultingPreGuide.do?menuSeq=3175">가족친화 컨설팅</a>
+	                            <div class="in_wrap">
+			                                <ul class="menuList3">
+			                                    <li id="parentMenuSeq175"><a href="https://www.ffsb.kr/consulting/consultingPreGuide.do?menuSeq=3175">가족친화인증준비</a>
+				                                        <ul>
+				                                            		<li menuSeq="175"><a href="https://www.ffsb.kr/consulting/consultingPreGuide.do?menuSeq=3175">컨설팅 안내</a></li>
+				                                            		<li menuSeq="176"><a href="https://www.ffsb.kr/consulting/consultingPreAskAll.do?menuSeq=3176">컨설팅 신청</a></li>
+				                                        </ul>
+			                                    </li>
+			                                </ul>
+			                                <ul class="menuList3">
+			                                    <li id="parentMenuSeq177"><a href="https://www.ffsb.kr/consulting/consultingAfterGuide.do?menuSeq=3177">가족친화문화컨설팅</a>
+				                                        <ul>
+				                                            		<li menuSeq="177"><a href="https://www.ffsb.kr/consulting/consultingAfterGuide.do?menuSeq=3177">컨설팅 안내</a></li>
+				                                            		<li menuSeq="178"><a href="https://www.ffsb.kr/consulting/consultingAfterAsk.do?menuSeq=3178">컨설팅 신청</a></li>
+				                                        </ul>
+			                                    </li>
+			                                </ul>
+	                            </div>
+	                        </li>
+	                        <li><a id="topMenu4" href="https://www.ffsb.kr/education/educationGuide.do?menuSeq=4179">직장교육</a>
+	                            <div class="in_wrap">
+			                                <ul class="menuList4">
+			                                    <li id="parentMenuSeq179"><a href="https://www.ffsb.kr/education/educationGuide.do?menuSeq=4179">직장교육안내</a>
+			                                    </li>
+			                                </ul>
+			                                <ul class="menuList4">
+			                                    <li id="parentMenuSeq181"><a href="https://www.ffsb.kr/education/educationRqn.do?menuSeq=4181">직장교육신청</a>
+				                                        <ul>
+				                                            		<li menuSeq="181"><a href="https://www.ffsb.kr/education/educationRqn.do?menuSeq=4181">기업방문형</a></li>
+				                                            		<li menuSeq="182"><a href="https://www.ffsb.kr/education/onlineEducationRqn.do?menuSeq=4182">온라인 개인수강형</a></li>
+				                                            		<li menuSeq="183"><a href="https://www.ffsb.kr/education/educationContentsRqn.do?menuSeq=4183">교육 콘텐츠 제공형</a></li>
+				                                        </ul>
+			                                    </li>
+			                                </ul>
+	                            </div>
+	                        </li>
+	                        <li><a id="topMenu5" href="https://www.ffsb.kr/selfChk/selfChkGuide.do?menuSeq=5184">자체점검</a>
+	                            <div class="in_wrap">
+			                                <ul class="menuList5">
+			                                    <li id="parentMenuSeq184"><a href="https://www.ffsb.kr/selfChk/selfChkGuide.do?menuSeq=5184">자체점검안내</a>
+			                                    </li>
+			                                </ul>
+			                                <ul class="menuList5">
+			                                    <li id="parentMenuSeq186"><a href="https://www.ffsb.kr/selfChk/selfChkRqn.do?idctNum=2024&menuSeq=5186">자체점검등록</a>
+				                                        <ul>
+				                                            		<li menuSeq="186"><a href="https://www.ffsb.kr/selfChk/selfChkRqn.do?idctNum=2024&menuSeq=5186">2023년</a></li>
+				                                            		<li menuSeq="187"><a href="https://www.ffsb.kr/selfChk/selfChkRqn.do?idctNum=2023&menuSeq=5187">2022년</a></li>
+				                                        </ul>
+			                                    </li>
+			                                </ul>
+	                            </div>
+	                        </li>
+	                        <li><a id="topMenu6" href="https://www.ffsb.kr/media/list.do?menuSeq=6188">알림소식</a>
+	                            <div class="in_wrap">
+			                                <ul class="menuList6">
+			                                    <li id="parentMenuSeq188"><a href="https://www.ffsb.kr/media/list.do?menuSeq=6188">가족친화정책홍보</a>
+			                                    </li>
+			                                </ul>
+			                                <ul class="menuList6">
+			                                    <li id="parentMenuSeq189"><a href="https://www.ffsb.kr/forum/forumApplyList.do?menuSeq=6189">가족친화 네트워크</a>
+			                                    </li>
+			                                </ul>
+			                                <ul class="menuList6">
+			                                    <li id="parentMenuSeq190"><a href="https://www.ffsb.kr/ffsbbod/bs/boardList.do?boardSeq=1&menuSeq=6190">공지사항</a>
+			                                    </li>
+			                                </ul>
+			                                <ul class="menuList6">
+			                                    <li id="parentMenuSeq192"><a href="https://www.ffsb.kr/ffsbbod/bs/boardList.do?boardSeq=4&menuSeq=6192">자료실</a>
+				                                        <ul>
+				                                            		<li menuSeq="192"><a href="https://www.ffsb.kr/ffsbbod/bs/boardList.do?boardSeq=4&menuSeq=6192">일반자료</a></li>
+				                                            		<li menuSeq="193"><a href="https://www.ffsb.kr/ffsbbod/bs/boardList.do?boardSeq=5&menuSeq=6193">홍보자료</a></li>
+				                                            		<li menuSeq="195"><a href="https://www.ffsb.kr/ffsbbod/ca/boardList.do?boardSeq=14&menuSeq=6195">콘텐츠자료실</a></li>
+				                                        </ul>
+			                                    </li>
+			                                </ul>
+	                            </div>
+	                        </li>
+	                        <li><a id="topMenu7" href="https://www.ffsb.kr/ffsbbod/bs/boardList.do?boardSeq=19&menuSeq=7198">소통·참여</a>
+	                            <div class="in_wrap">
+			                                <ul class="menuList7">
+			                                    <li id="parentMenuSeq198"><a href="https://www.ffsb.kr/ffsbbod/bs/boardList.do?boardSeq=19&menuSeq=7198">소통게시판</a>
+			                                    </li>
+			                                </ul>
+			                                <ul class="menuList7">
+			                                    <li id="parentMenuSeq196"><a href="https://www.ffsb.kr/ffsbbod/bs/boardList.do?boardSeq=2&menuSeq=7196">인증기업우수사례</a>
+			                                    </li>
+			                                </ul>
+			                                <ul class="menuList7">
+			                                    <li id="parentMenuSeq197"><a href="https://www.ffsb.kr/ffsbbod/faq/boardList.do?boardSeq=8&menuSeq=7197">자주하는질문</a>
+			                                    </li>
+			                                </ul>
+			                                <ul class="menuList7">
+			                                    <li id="parentMenuSeq199"><a href="https://www.ffsb.kr/ffsbbod/bs/boardList.do?boardSeq=18&menuSeq=7199">인증신고게시판</a>
+			                                    </li>
+			                                </ul>
+	                            </div>
+	                        </li>
+                    </ul>
+                </div>
+                <div class="hd_scmn">
+                    <div class="hd_search">
+                        <button type="button" class="btn_search">검색</button>
+                        <div class="sc_form">
+                            <form id="headFrm" name="headFrm" action="" method="post">
+                                <input type="text" id="headSearchText" name="searchText" placeholder="검색어를 입력하세요" style="padding-left:16px;" title="검색어"/>
+                                <input type="text" style="display:none;" />
+                                <button id="headSearchSubmit" type="button" class="sc_submit">검색</button>
+                                <button type="button" class="sc_close">검색닫기</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="hd_menu">
+                        <button type="button" class="btn_menuall">전체메뉴</button>
+                    </div>
+                    <!-- 전체메뉴 -->
+                    <div class="nav_all">
+                        <div class="nav_all_inner">
+                            <div class="nav_all_title">전체 메뉴</div>
+                            <div class="nav_all_content">
+                                <div class="nav_all_box">
+                                    <div class="nav_group">
+                                        <div class="grouo_title"><a>가족친화사업</a></div>
+                                        <div class="in_wrap">
+		                                            <ul>
+		                                                <li><a href="https://www.ffsb.kr/ffm/ffmCertBusiGuide.do?menuSeq=1146">가족친화사업안내</a>
+		                                                </li>
+		                                            </ul>
+		                                            <ul>
+		                                                <li><a href="https://www.ffsb.kr/ffm/ffmCertStatus.do?menuSeq=1151">인증기업·기관현황</a>
+				                                                <ul>
+		                                        							<li><a href="https://www.ffsb.kr/ffm/ffmCertStatus.do?menuSeq=1151">- 인증기업 현황</a></li>
+		                                        							<li><a href="https://www.ffsb.kr/ffm/ffmCertCompSearch.do?menuSeq=1152">- 인증기업 정보</a></li>
+		                                                    	</ul>
+		                                                </li>
+		                                            </ul>
+		                                            <ul>
+		                                                <li><a href="https://www.ffsb.kr/information/incentive1.do?menuSeq=1153">인증기업인센티브</a>
+				                                                <ul>
+		                                        							<li><a href="https://www.ffsb.kr/information/incentive1.do?menuSeq=1153">- 기업 인센티브</a></li>
+		                                        							<li><a href="https://www.ffsb.kr/information/incentive2.do?menuSeq=1154">- 근로자 인센티브</a></li>
+		                                                    	</ul>
+		                                                </li>
+		                                            </ul>
+		                                            <ul>
+		                                                <li><a href="https://www.ffsb.kr/information/immgCardGuide.do?menuSeq=1155">출입국우대카드</a>
+				                                                <ul>
+		                                        							<li><a href="https://www.ffsb.kr/information/immgCardGuide.do?menuSeq=1155">- 출입국우대카드 안내</a></li>
+		                                        							<li><a href="https://www.ffsb.kr/information/immgCardReqWrite.do?menuSeq=1156">- 출입국우대카드 신청</a></li>
+		                                                    	</ul>
+		                                                </li>
+		                                            </ul>
+		                                            <ul>
+		                                                <li><a href="https://www.ffsb.kr/customer/location1.do?menuSeq=1200">찾아오시는길</a>
+		                                                </li>
+		                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nav_all_box">
+                                    <div class="nav_group">
+                                        <div class="grouo_title"><a>가족친화인증</a></div>
+                                        <div class="in_wrap">
+		                                            <ul>
+		                                                <li><a href="https://www.ffsb.kr/ffm/ffmCertSummary.do?menuSeq=2157">인증제도안내</a>
+				                                                <ul>
+		                                        							<li><a href="https://www.ffsb.kr/ffm/ffmCertSummary.do?menuSeq=2157">- 인증개요</a></li>
+		                                        							<li><a href="https://www.ffsb.kr/ffm/ffmCertProcess.do?menuSeq=2158">- 인증절차 및 추진일정</a></li>
+		                                                    	</ul>
+		                                                </li>
+		                                            </ul>
+		                                            <ul>
+		                                                <li><a href="https://www.ffsb.kr/ffm/ffmCertEstLaw.do?menuSeq=2163">평가배점기준</a>
+				                                                <ul>
+		                                        							<li><a href="https://www.ffsb.kr/ffm/ffmCertEstLaw.do?menuSeq=2163">- 법규 요구사항</a></li>
+		                                        							<li><a href="https://www.ffsb.kr/ffm/ffmCertEstNew.do?menuSeq=2164">- 신규인증</a></li>
+		                                        							<li><a href="https://www.ffsb.kr/ffm/ffmCertEstRe.do?menuSeq=2165">- 유효기간 연장·재인증</a></li>
+		                                        							<li><a href="https://www.ffsb.kr/ffm/ffmCertEstReg.do?menuSeq=2166">- 가·감점</a></li>
+		                                                    	</ul>
+		                                                </li>
+		                                            </ul>
+		                                            <ul>
+		                                                <li><a href="https://www.ffsb.kr/ffm/ffmCertScoreSelfDiag1.do?menuSeq=2167">예상점수미리보기</a>
+				                                                <ul>
+		                                        							<li><a href="https://www.ffsb.kr/ffm/ffmCertScoreSelfDiag1.do?menuSeq=2167">- 대기업·공공기관</a></li>
+		                                        							<li><a href="https://www.ffsb.kr/ffm/ffmCertScoreSelfDiag2.do?menuSeq=2168">- 중소기업</a></li>
+		                                                    	</ul>
+		                                                </li>
+		                                            </ul>
+		                                            <ul>
+		                                                <li><a href="https://www.ffsb.kr/ffm/ffmPresentMain.do?menuSeq=2161">설명회참여신청</a>
+		                                                </li>
+		                                            </ul>
+		                                            <ul>
+		                                                <li><a href="https://www.ffsb.kr/ffm/ffmCertRqnGuide.do?menuSeq=2169">가족친화인증신청</a>
+				                                                <ul>
+		                                        							<li><a href="https://www.ffsb.kr/ffm/ffmCertRqnGuide.do?menuSeq=2169">- 신청안내</a></li>
+		                                        							<li><a href="https://www.ffsb.kr/ffm/ffmCertRqnNew.do?fcrGbn=01&menuSeq=2170">- 신규 인증 신청</a></li>
+		                                        							<li><a href="https://www.ffsb.kr/ffm/ffmCertRqnNew.do?fcrGbn=02&menuSeq=2171">- 유효기간 연장 신청</a></li>
+		                                        							<li><a href="https://www.ffsb.kr/ffm/ffmCertRqnNew.do?fcrGbn=03&menuSeq=2172">- 재인증 신청</a></li>
+		                                                    	</ul>
+		                                                </li>
+		                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nav_all_box">
+                                    <div class="nav_group">
+                                        <div class="grouo_title"><a>가족친화 컨설팅</a></div>
+                                        <div class="in_wrap">
+		                                            <ul>
+		                                                <li><a href="https://www.ffsb.kr/consulting/consultingPreGuide.do?menuSeq=3175">가족친화인증준비</a>
+				                                                <ul>
+		                                        							<li><a href="https://www.ffsb.kr/consulting/consultingPreGuide.do?menuSeq=3175">- 컨설팅 안내</a></li>
+		                                        							<li><a href="https://www.ffsb.kr/consulting/consultingPreAskAll.do?menuSeq=3176">- 컨설팅 신청</a></li>
+		                                                    	</ul>
+		                                                </li>
+		                                            </ul>
+		                                            <ul>
+		                                                <li><a href="https://www.ffsb.kr/consulting/consultingAfterGuide.do?menuSeq=3177">가족친화문화컨설팅</a>
+				                                                <ul>
+		                                        							<li><a href="https://www.ffsb.kr/consulting/consultingAfterGuide.do?menuSeq=3177">- 컨설팅 안내</a></li>
+		                                        							<li><a href="https://www.ffsb.kr/consulting/consultingAfterAsk.do?menuSeq=3178">- 컨설팅 신청</a></li>
+		                                                    	</ul>
+		                                                </li>
+		                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="nav_group">
+                                        <div class="grouo_title"><a>직장교육</a></div>
+                                        <div class="in_wrap">
+		                                            <ul>
+		                                                <li><a href="https://www.ffsb.kr/education/educationGuide.do?menuSeq=4179">직장교육안내</a>
+		                                                </li>
+		                                            </ul>
+		                                            <ul>
+		                                                <li><a href="https://www.ffsb.kr/education/educationRqn.do?menuSeq=4181">직장교육신청</a>
+				                                                <ul>
+		                                        							<li><a href="https://www.ffsb.kr/education/educationRqn.do?menuSeq=4181">- 기업방문형</a></li>
+		                                        							<li><a href="https://www.ffsb.kr/education/onlineEducationRqn.do?menuSeq=4182">- 온라인 개인수강형</a></li>
+		                                        							<li><a href="https://www.ffsb.kr/education/educationContentsRqn.do?menuSeq=4183">- 교육 콘텐츠 제공형</a></li>
+		                                                    	</ul>
+		                                                </li>
+		                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="nav_group">
+                                        <div class="grouo_title"><a>자체점검</a></div>
+                                        <div class="in_wrap">
+		                                            <ul>
+		                                                <li><a href="https://www.ffsb.kr/selfChk/selfChkGuide.do?menuSeq=5184">자체점검안내</a>
+		                                                </li>
+		                                            </ul>
+		                                            <ul>
+		                                                <li><a href="https://www.ffsb.kr/selfChk/selfChkRqn.do?idctNum=2024&menuSeq=5186">자체점검등록</a>
+				                                                <ul>
+		                                        							<li><a href="https://www.ffsb.kr/selfChk/selfChkRqn.do?idctNum=2024&menuSeq=5186">- 2023년</a></li>
+		                                        							<li><a href="https://www.ffsb.kr/selfChk/selfChkRqn.do?idctNum=2023&menuSeq=5187">- 2022년</a></li>
+		                                                    	</ul>
+		                                                </li>
+		                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nav_all_box">
+                                    <div class="nav_group">
+                                        <div class="grouo_title"><a>알림소식</a></div>
+                                        <div class="in_wrap">
+		                                            <ul>
+		                                                <li><a href="https://www.ffsb.kr/media/list.do?menuSeq=6188">가족친화정책홍보</a>
+		                                                </li>
+		                                            </ul>
+		                                            <ul>
+		                                                <li><a href="https://www.ffsb.kr/forum/forumApplyList.do?menuSeq=6189">가족친화 네트워크</a>
+		                                                </li>
+		                                            </ul>
+		                                            <ul>
+		                                                <li><a href="https://www.ffsb.kr/ffsbbod/bs/boardList.do?boardSeq=1&menuSeq=6190">공지사항</a>
+		                                                </li>
+		                                            </ul>
+		                                            <ul>
+		                                                <li><a href="https://www.ffsb.kr/ffsbbod/bs/boardList.do?boardSeq=4&menuSeq=6192">자료실</a>
+				                                                <ul>
+		                                        							<li><a href="https://www.ffsb.kr/ffsbbod/bs/boardList.do?boardSeq=4&menuSeq=6192">- 일반자료</a></li>
+		                                        							<li><a href="https://www.ffsb.kr/ffsbbod/bs/boardList.do?boardSeq=5&menuSeq=6193">- 홍보자료</a></li>
+		                                        							<li><a href="https://www.ffsb.kr/ffsbbod/ca/boardList.do?boardSeq=14&menuSeq=6195">- 콘텐츠자료실</a></li>
+		                                                    	</ul>
+		                                                </li>
+		                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="nav_group">
+                                        <div class="grouo_title"><a>소통·참여</a></div>
+                                        <div class="in_wrap">
+		                                            <ul>
+		                                                <li><a href="https://www.ffsb.kr/ffsbbod/bs/boardList.do?boardSeq=19&menuSeq=7198">소통게시판</a>
+		                                                </li>
+		                                            </ul>
+		                                            <ul>
+		                                                <li><a href="https://www.ffsb.kr/ffsbbod/bs/boardList.do?boardSeq=2&menuSeq=7196">인증기업우수사례</a>
+		                                                </li>
+		                                            </ul>
+		                                            <ul>
+		                                                <li><a href="https://www.ffsb.kr/ffsbbod/faq/boardList.do?boardSeq=8&menuSeq=7197">자주하는질문</a>
+		                                                </li>
+		                                            </ul>
+		                                            <ul>
+		                                                <li><a href="https://www.ffsb.kr/ffsbbod/bs/boardList.do?boardSeq=18&menuSeq=7199">인증신고게시판</a>
+		                                                </li>
+		                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //전체메뉴 -->
+                </div>
+            </div>
+        </div>
+	  	<div id="dialog-confirm" title= "로그인 연장" style="display:none;">
+			<p>
+				<span class="ui-icon ui-icon-alert" style="float:left; margin:0 7px 20px 0;"></span>
+				<span id="confirm-msg"></span>
+			</p>
+		</div>
+		<!-- 모바일 헤더 -->
+		<div class="containers1 one clearfix">
+			<h1 class="logo"><a href="https://www.ffsb.kr/"><img src="https://www.ffsb.kr/common/img/common/h_logo.png" alt="가족친화지원사업 로고" /></a></h1>
+		</div>
+		<div class="header__in">
+			<!-- 모바일 메뉴 -->
+			<div class="mobile_top_nav mobile_nav_bg">
+				<div class="mobile_icon">
+					<!-- <a href="#gnb_nav_mobile" class="m_open_btn mobile_on_off"><img src="https://www.ffsb.kr/common/img/common/menu_open.png" alt="메뉴보기" /></a> -->
+					<a href="#gnb_nav_mobile" class="m_open_btn mobile_on_off"><span></span><span></span><span></span></a>
+					<!-- <a href="#" class="m_s_btn"><img src="commons/images/mobile/menu_search.png" alt="검색" /></a> -->
+				</div>
+				<div class="mobile_top_nav__in">
+					<nav id="gnb_nav_mobile">
+						<h2 class="hidden_word">menu</h2>
+						<ul class="gnb clearfix gnb-ul float_wrap nav-menu"><!-- .selected 클래스 있어야 메뉴가 펼쳐진 상태 -->
+							<!-- 2022-05-25 메뉴 수정 -->
+							<li class="gnb-menu nav-item t_menu selected"><a href="#">전체 메뉴</a>
+								<div class="sub-nav"><!-- .selected 클래스 있어야 메뉴가 펼쳐진 상태 -->
+									<div class="sub-nav__box">
+										<ul class="sub-nav__box__ul float_wrap">
+											<li class="sub-nav__box__list float_wrap"><a href="https://www.ffsb.kr/ffm/ffmCertSummary.do"><span>가족친화인증 안내</span></a></li>
+											<li class="sub-nav__box__list float_wrap"><a href="https://www.ffsb.kr/selfChk/selfChkGuide.do"><span>가족친화인증 자체점검</span></a></li>
+											<li class="sub-nav__box__list float_wrap"><a href="https://www.ffsb.kr/consulting/consultingPreGuide.do"><span>컨설팅 안내</span></a></li>
+											<li class="sub-nav__box__list float_wrap"><a href="https://www.ffsb.kr/education/educationGuide.do"><span>직장교육 안내</span></a></li>
+											<li class="sub-nav__box__list float_wrap"><a href="https://www.ffsb.kr/ffsbbod/bs/boardList.do?boardSeq=4"><span>일반자료</span></a></li>
+											<li class="sub-nav__box__list float_wrap"><a href="https://www.ffsb.kr/ffsbbod/bs/boardList.do?boardSeq=5"><span>홍보자료</span></a></li>
+										</ul>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+			<span class="mobile-close mobile_on_off"><a href="javascript:;">닫기</a></span>
+			<script>
+				/* 모바일 메뉴 오픈 */
+				function mobile_menu() {
+					$("#to_top").css("opacity", "0");
+					jQuery('.mobile_on_off').on('click',function(){
+						jQuery('body').toggleClass('mobile_menu_open');
+						jQuery('#gnb_nav_mobile').toggleClass('selected');
+						jQuery('.mobile_top_nav').toggleClass('selected');
+						jQuery('.mobile_icon').toggleClass('selected');
+						jQuery('.mobile_top_nav .gnb').toggleClass('selected');
+						jQuery('.top-nav').toggleClass('selected');
+						return false;
+					});
+					return false;
+				}
+				mobile_menu();
+				function mobile_tc(){
+				$('#gnb_nav_mobile li.taphover').on("touchstart", function (e) {
+					"use strict"; //satisfy the code inspectors
+					var link = $(this); //preselect the link
+					if (link.hasClass('selected')) {
+						return true;
+					} else {
+						link.addClass("selected");
+						$('#gnb_nav_mobile li.taphover').not(this).removeClass("selected");
+						e.preventDefault();
+						return false; //extra, and to make sure the function has consistent return points
+					}
+				});
+				}
+				(function(window, document, $) {
+					})(window, document, jQuery);
+					if(navigator.userAgent.match(/Android|Mobile|iP(hone|od|ad)|BlackBerry|IEMobile|Kindle|NetFront|Silk-Accelerated|(hpw|web)OS|Fennec|Minimo|Opera M(obi|ini)|Blazer|Dolfin|Dolphin|Skyfire|Zune/)){
+					//   mobile_tc(); //모바일(스마트폰+태블릿)일 때 실행 될 스크립트
+					}
+					function mainGnbMobile() {
+							var oldIndex = 0;
+							jQuery('.mobile_top_nav li.gnb-menu').click(function() {
+								var thisIndex = jQuery('.mobile_top_nav li.gnb-menu').index(this);
+								jQuery('.mobile_top_nav div.sub-nav').removeClass('selected');
+								jQuery('.mobile_top_nav li.gnb-menu').removeClass('selected');
+								jQuery('.mobile_top_nav li.gnb-menu').removeClass('on');
+								jQuery('.mobile_top_nav div.sub-nav').eq(thisIndex).addClass('selected');
+								jQuery('.mobile_top_nav li.gnb-menu').eq(thisIndex).addClass('selected');
+								//return false;
+							});
+					};
+					mainGnbMobile();
+				$(document).ready(function() {
+						/**/
+						function gnb_type(){
+							var gnbli = jQuery('#gnb.gnb-ul > li').length;
+							if ( gnbli == 5) {
+								jQuery('.gnb').addClass('five_type');
+							} else if ( gnbli == 2){
+								jQuery('.gnb').addClass('two_type');
+							} else if ( gnbli == 3){
+								jQuery('.gnb').addClass('three_type');
+							} else if ( gnbli == 4){
+								jQuery('.gnb').addClass('four_type');
+							} else if ( gnbli == 7){
+								jQuery('.gnb').addClass('seven_type');
+							} else if ( gnbli == 8){
+								jQuery('.gnb').addClass('eight_type');
+							} else if ( gnbli == 9){
+								jQuery('.gnb').addClass('nine_type');
+							} else if ( gnbli == 10){
+								jQuery('.gnb').addClass('ten_type');
+							} else if ( gnbli == 11){
+								jQuery('.gnb').addClass('eleven_type');
+							} else {
+								jQuery('.gnb').addClass('six_type');
+							}
+						}
+						gnb_type();
+				});
+			</script>
+		</div>
+    </div><!-- end #header -->
+<script src="https://www.ffsb.kr/common/js/assets/common.js?ver=202301"></script>
+<script type="text/javascript" src="https://wcs.naver.net/wcslog.js"></script>
+<script type="text/javascript">
+	if(!wcs_add) var wcs_add = {}; wcs_add["wa"] = "211ae0bad54580"; wcs_do();
+</script>
+	<!-- // 상단헤더 -->
+	<div id="container">
+		<!-- contentWrap -->
+<script type="text/javascript">
+$(document).ready(function() {
+	//https 처리
+	/*var strProtocol = document.location.protocol;
+	if(!('www.ffsb.kr' == '125.130.18.5' || 'www.ffsb.kr' == '127.0.0.1' || 'www.ffsb.kr' == 'localhost' || 'www.ffsb.kr' == '220.95.250.107' ) && strProtocol == 'http:'){
+		document.location.href = document.location.href.replace('http:', 'https:');
+	}*/
+	$("#memId").focus();
+	$(function() {
+		/* 로그인 */
+		$("#btnLogin").click(function() {
+			if( $("#memId").val() == "" ) {
+				alertChkMsg("아이디", "입력", 0);
+				$("#memId").focus();
+				return;
+			} else {
+				if( stringUtil.notStrBlank($("#memId").val()) ) {
+					alert("아이디에 공백이 존재합니다.\n다시 입력해 주십시오.");
+					return;
+				}
+				if( stringUtil.notSpecialCharter($("#memId").val()) ) {
+					alert("아이디에 특수문자가 존재합니다.\n다시 입력해 주십시오.");
+					return;
+				}
+				if( stringUtil.notInputHangul($("#memId").val()) ) {
+					alert("아이디에 한글이 존재합니다.\n다시 입력해 주십시오.");
+					return;
+				}
+			}
+			if( $("#memPwd").val() == "" ) {
+				alertChkMsg("비밀번호", "입력", 0);
+				$("#memPwd").focus();
+				return;
+			} else {
+				if($("#memPwd").val().length < 6) {
+					alert("비밀번호를 최소 6자리 이상 입력해주십시오.");
+					$("#memPwd").focus();
+					return;
+				}
+			}
+			$.ajax({
+				url: httpsDomain + contextPath + "login/ajaxLoginProc.do",
+				dataType: "json",
+				type: "post",
+				data: {
+					memId: $.trim($("#memId").val())
+				   ,memPwd: $.trim($("#memPwd").val())
+				   ,judgeChkYn: $.trim($("#judgeChkYn").val())
+				},
+				timeout: 3000,
+				async: false,
+				success: function(data) {
+					if( data ) {
+						if( data.result == "" ) {	
+							alert("로그인시 오류가 발생하였습니다. 다시 시도하여 주십시오.");
+							return;
+						} else if( data.result == "A" || data.result == "B" ) {	
+							alert("아이디 또는 비밀번호를 잘못 입력 하셨습니다.");
+							return;
+						} else if( data.result == "C" ) {	
+							alert("비밀번호가 3회 이상 오류입니다. 5회 오류 시 이용이 정지 되어\n본인인증을 거치는 번거로움이 있으니 유의하십시오.");
+							return;
+						} else if( data.result == "D" ) {	
+							location.href = httpDomain + contextPath + "login/pwdError.do";
+							return;
+						} else if( data.result == "D-1" ) {
+							if( data.judgeYn == "N" ) {
+								$("#frm").attr({
+									method: "post"
+									,action: httpsDomain + contextPath + "login/imsiPwdChg.do"
+								}).submit();
+							} else {
+								alert("임시 비밀번호를 변경해 주세요. 변경하지 않을경우 개인정보 보호에\n유의하십시오.");
+								//로그인 후 이동할 페이지가 있으면 해당 페이지로 이동한다.
+								if(typeof(data.loginNextUrl) != "undefined" && data.loginNextUrl != "") {
+									location.href = data.loginNextUrl;								
+								} else {	
+									//2017/06/20 임시비번이면 마이페이지로 이동  수정
+									//location.href = httpDomain + contextPath;
+									location.href = httpDomain + contextPath + "mypageJudge/judgeMemberInfoList.do";		
+								}
+								return;
+							}
+							return;
+						} else if( data.result == "E" ) {		// 회원 재동의
+							if( data.judgeYn == "N" ) {
+								$("#frm").attr({
+									method: "post"
+									,action: httpsDomain + contextPath + "mem/memAgree.do"
+								}).submit();
+							}
+							return;
+						} else if( data.result == "F" ) {
+							if( data.judgeYn == "N" ) {
+								alert("강사 또는 컨설턴트 회원님으로 승인상태가 아닙니다.");
+							} else {
+								alert("심사원님은 적격상태가 아닙니다.");
+							}
+							return;
+						} else if( data.result == "0000" ) {
+							var urlParams = new URL(location.href).searchParams;
+							if(urlParams.has('conSeq')){
+								location.href = "" + "/ffsbbod/bs/boardView.do?menuSeq=7198&boardSeq=19&conSeq=" + urlParams.get('conSeq');
+							} else if(typeof(data.loginNextUrl) != "undefined" && data.loginNextUrl != "") {//로그인 후 이동할 페이지가 있으면 해당 페이지로 이동한다.
+								location.href = data.loginNextUrl;
+							} else {
+								location.href = httpDomain + contextPath;
+							}
+							return;
+						}
+					} else {
+						alert("로그인시 오류가 발생하였습니다. 다시 시도하여 주십시오.");
+					}
+				},
+				error: function() {
+					alert("로그인시 오류가 발생하였습니다. 다시 시도하여 주십시오.");
+				}
+			});
+		});
+		// input memId, memPwd click
+		$("#memId, #memPwd").keydown(function(e) {
+			if(e.keyCode == 13) {
+				$("#btnLogin").click();
+			}
+		});
+	});
+});
+//심사원 체크
+function fnJudgeChkYn(){
+	if($("#judgeChkYn").val() != "Y"){
+		$("#judgeChkYn").val("Y");
+		$("#judgeChkYn").prop("checked", true);
+	}else{
+		$("#judgeChkYn").val("N");
+		$("#judgeChkYn").prop("checked", false);
+	}
+}
+</script>
+<div id="content" class="ws800">	
+	<div class="inner">				
+		<div class="visuals1">
+			<h1 class="tit">가족이 행복한 즐거운 일터!<br /><strong class="lg">가족친화지원사업</strong></h1>
+			<img src="https://www.ffsb.kr/common/img/sub/icon_lock.png" alt="" class="icon" />
+		</div>
+<form id="frm" name="frm" method="post" action="">
+		<div class="boxs4">
+			<div class="inners6">
+				<div class="heading">
+					<h2 class="tit">로그인</h2>	
+				</div>
+				<div class="cont">
+					<div class="section">
+						<div>
+							<input type="text" id="memId" name="memId" class="is2" style="width:400px;" placeholder="아이디 입력" title="아이디 입력" value="" />
+							<p class="fs13 cls2 mts5">6~16자리 영문/숫자 조합(대소문자구분)</p>
+						</div>
+						<div class="mts20">
+							<input type="password" id="memPwd" name="memPwd" class="is2" style="width:400px;" placeholder="비밀번호 입력" title="비밀번호 입력" value="" />
+							<p class="fs13 cls2 mts5">6~16자리 영문/숫자/특수문자 조합(대소문자구분)</p>
+						</div>
+						<div class="mts20">
+							<!-- <input type="password" id="judgeChk" name="judgeChk" class="is2" style="width:400px;" placeholder="심사원 체크" title="심사원체크" value="Y" /> -->
+							<input type="checkbox" id="judgeChkYn" name="judgeChkYn" value="N" onclick="fnJudgeChkYn();" />
+							<label for="judgeChkYn" class="cs1 r">심사원일 경우 체크해 주세요</label> 
+						</div>
+					</div>
+					<div class="mts40 acs">
+						<!-- <button type="button" class="btns a sz2 bc3" style="width:220px;">로그인</button>	 -->
+						<a href="javascript:;" id="btnLogin" class="btns a sz2 bc7 bolds" style="width:220px;">로그인</a>
+					</div>
+				</div>
+			</div>				
+		</div>
+</form>
+		<ul class="lists2 acs mts30">
+			<li><a href="https://www.ffsb.kr/login/idFind.do">아이디찾기</a></li>
+			<li><a href="https://www.ffsb.kr/login/pwdFind.do">비밀번호찾기</a></li>
+			<li><a href="https://www.ffsb.kr/mem/compUserJoin.do">회원가입</a></li>
+		</ul>
+	</div><!-- end .inner -->
+</div><!-- end #content -->	
+		<!-- //contentWrap -->
+<div id="quick" class="out js-trans">			
+	<p class="btn"><a href="#">QUICK MENU</a></p>
+	<div class="quicks">
+		<h2 class="tit">QUICK<br />MENU</h2>				
+		<ul class="list">
+			<li class="ic1"><a href="http://www.ffsb.kr/ffm/ffmCertSummary.do?menuSeq=2157">인증제도<br />안내</a></li>
+			<li class="ic2"><a href="http://www.ffsb.kr/ffm/ffmCertEstLaw.do?menuSeq=2163">평가배점<br />기준</a></li>
+			<li class="ic3"><a href="http://www.ffsb.kr/ffm/ffmCertRqnGuide.do?menuSeq=2169">가족친화인증<br />신청</a></li>
+			<li class="ic4"><a href="http://www.ffsb.kr/ffm/ffmPresentMain.do?menuSeq=2161">설명회신청</a></li>
+			<li class="ic5"><a href="http://www.ffsb.kr/information/incentive1.do?menuSeq=1153">인증기업<br />혜택</a></li>
+			<li class="ic6"><a href="https://www.ffsb.kr/information/immgCardGuide.do?menuSeq=1155">출입국<br />우대카드</a></li>
+		</ul>
+		<p class="top js-quick-top"><a href="#top"><img src="https://www.ffsb.kr/common/img/common/btn_top.png" alt="맨위로" /></a></p>
+	</div>
+	<script>
+		$('#quick .btn a').click(function(event){
+			event.stopPropagation();
+			$('#quick').toggleClass('active');
+		});
+		$(document).click(function(event) {
+			if (!$(event.target).closest('#quick').length) {
+				$('#quick').removeClass('active');
+			}
+		});
+	</script>
+</div>	
+	</div><!-- end #container -->
+	<!-- 풋터 -->
+<!-- 날짜				작업자		내용  -->
+<!-- 2022.05.24		이다혜		인증마크 a태그 추가  -->
+<div id="footer">
+	<div class="container">
+	    <div class="ft_top">
+	        <ul class="ft_links">
+	            <li><a href="http://www.ffsb.kr/rule/termsUse.do">이용약관</a></li>
+				<li><a href="http://www.ffsb.kr/rule/privacy.do?v=8" class="em" style="color:#66B2FF !important">개인정보처리방침</a></li>
+				<li><a href="http://www.ffsb.kr/customer/location1.do?menuSeq=1200">찾아오시는길</a></li>
+	        </ul>
+	        <div class="ft_marks">
+	            <div class="item">
+					<a href="http://www.webwatch.or.kr/Situation/WA_Situation.html?MenuCD=110" target="_blank"  >
+						<img src="https://www.ffsb.kr/common/img/common/foot_ban_wia.png" alt="과학기술정보통신부 WEB ACCESSIBILITY 마크(웹 접근성 품질인증 마크)" title="국가 공인 인증기관 : 웹와치" style="vertical-align: middle" />
+					</a>
+	            </div>
+	            <div class="item">
+	                <a href="https://www.eprivacy.or.kr/front/certifiedSiteMark/certifiedSiteMarkPopup.do?certCmd=E&certNum=2023-E-R073" onclick="window.open(this.href,'seal','width=527,height=720,location=no,status=no,scrollbars=no'); return false;" target="_blank" title="새 창 알림(eprivacy 인증서)"><img src="https://www.ffsb.kr/common/img/common/mark1_eprivacy.png" style="cursor:pointer;" alt="개인정보보호협회 인증서 보기 e PRIVACY" title="eprivacy 인증서" width="40px"/></a>
+	            </div>
+	        </div>
+	    </div>
+	    <div class="ft_bottom">
+	        <div class="l">
+	            <div class="ft_logo">가족친화사업</div>
+	            <div class="ft_ads">서울특별시 중구 퇴계로 173(충무로3가, 남산스퀘어)21층, 24층</div>
+	            <div class="ft_family">
+	                <button type="button" class="btn_family">패밀리 사이트</button>
+	                <div class="family_list">
+	                    <a href="http://www.mogef.go.kr/" target="_blank">여성가족부</a>
+	                    <a href="http://www.kihf.or.kr/" target="_blank">한국건강가정진흥원</a>
+	                    <a href="http://www.ikmr.co.kr/" target="_blank">한국경영인증원</a>
+	                </div>
+	                <script>
+	                $(".btn_family").click(function (event) {
+	                    event.stopPropagation();
+	                    if ($(".family_list:visible").length > 0) {
+	                        $(".family_list").hide();
+	                    }else{
+	                        $(".family_list").show();
+	                    }
+	                });
+	                $(document).click(function (event) {
+	                    if ($(event.target).closest(".family_list").length === 0) {
+	                        if ($(".family_list:visible").length > 0) {
+	                            $(".family_list").hide();
+	                        }
+	                    }
+	                });
+	                </script>
+	            </div>
+	        </div>
+	        <div class="r">
+	            <div class="ft_cs">
+	                <div class="item">
+	                    <span class="num">02 - 3479 - 7671, 7674</span>
+	                    <span class="cp">가족친화컨설팅</span>
+	                    <span class="dm">한국건강가정진흥원 가족친화서비스부</span>
+	                </div>
+	                <div class="item">
+	                    <span class="num">02 - 3479 - 7672</span>
+	                    <span class="cp">가족친화직장교육</span>
+	                    <span class="dm">한국건강가정진흥원 가족친화서비스부</span>
+	                </div>
+	                <div class="item">
+	                    <span class="num">02 - 6309 - 9034, 9042, 9043</span>
+	                    <span class="cp">가족친화인증심사</span>
+	                    <span class="dm">(한국경영인증원 가족친화인증사무국)</span>
+	                </div>
+	            </div>
+	            <div class="ft_cooperative">
+	                <div class="item"><img src="https://www.ffsb.kr/common/style/assets/images/common/cooperative_hk.png" alt="한국건강가정진흥원"></div>
+	                <div class="item"><img src="https://www.ffsb.kr/common/style/assets/images/common/cooperative_ys.png" alt="여성가족부"></div>
+	                <div class="item"><img src="https://www.ffsb.kr/common/style/assets/images/common/cooperative_ky.png" alt="한국경영인증원"></div>
+	            </div>
+	        </div>
+	    </div>
+	</div>
+	<!-- 모바일 풋터 -->
+	<div class="inner">
+		<div class="containers1">
+			<div class="inner clearfix">
+				<div class="col one clearfix" >
+					<p><img src="https://www.ffsb.kr/common/img/common/logo1.png" alt="여성가족부" /></p>
+					<p><img src="https://www.ffsb.kr/common/img/common/logo4.png" alt="한국건강가정진흥원" /></p>
+					<p><img src="https://www.ffsb.kr/common/img/common/logo3.png" alt="한국경영인증원" /></p>
+				</div>
+				<div class="col two">
+					<ul class="list clearfix" >
+						<li><a href="http://www.ffsb.kr/rule/termsUse.do">이용약관</a></li>
+						<li><a href="http://www.ffsb.kr/rule/privacy.do?v=8" class="em" style="color:#66B2FF !important">개인정보처리방침</a></li>
+						<li><a href="http://www.ffsb.kr/customer/location1.do?menuSeq=1200">찾아오시는길</a></li>
+					</ul>
+					<address>
+						<span class="addr" style="margin-bottom: 7px;">서울특별시 중구 퇴계로 173(충무로3가, 남산스퀘어)21층, 24층</span>
+						· 가족친화인증심사 : 한국경영인증원 가족친화인증사무국(02-6309-9034,9042,9043)<br>
+						· 가족친화컨설팅 : 한국건강가정진흥원 가족친화서비스부(02-3479-7671,7674)<br>
+						· 가족친화직장교육 : 한국건강가정진흥원 가족친화서비스부(02-3479-7672)<br>
+					</address>
+					<p class="copyright">Copyright ⓒ KOREA INSTITUTE FOR HEALTHY FAMILY. All Rights Reserved</p>
+				</div>
+				<div class="col three">
+					<select class="ss1 js-family-select" title="패밀리 사이트(새창열림)">
+						<option value="" selected="selected">패밀리 사이트</option>
+						<option value="http://www.mogef.go.kr/">여성가족부</option>
+						<option value="http://www.kihf.or.kr/">한국건강가정진흥원</option>
+						<option value="http://www.ikmr.co.kr/">한국경영인증원</option>
+						<!-- <option value="http://www.kmar.co.kr/">한국경영인증원</option> -->
+					</select>
+					<button type="button" class="btns btn-family" title="새 창으로 이동">이동</button>
+				</div>
+				<!-- 인증마크 -->
+				<div class="award-banner">
+					<a href="http://www.webwatch.or.kr/Situation/WA_Situation.html?MenuCD=110" target="_blank"  >
+						<img src="https://www.ffsb.kr/common/img/common/foot_ban_wia.png" alt="과학기술정보통신부 WEB ACCESSIBILITY 마크(웹 접근성 품질인증 마크)" title="국가 공인 인증기관 : 웹와치" style="vertical-align: middle" />
+					</a>
+					<!-- <img src="https://www.eprivacy.or.kr/seal/mark_e.gif"style="cursor:pointer;"onclick="markPopupE('2019-N002')" alt="개인정보보호협회 인증서 보기 e PRIVACY"/> -->
+					<a href="https://www.eprivacy.or.kr/front/certifiedSiteMark/certifiedSiteMarkPopup.do?certCmd=E&certNum=2022-E-R064" onclick="window.open(this.href,'seal','width=527,height=720,location=no,status=no,scrollbars=no'); return false;" target="_blank" title="새 창 알림(eprivacy 인증서)"><img src="https://www.ffsb.kr/common/img/common/mark1_eprivacy.png" style="cursor:pointer;" alt="개인정보보호협회 인증서 보기 e PRIVACY" title="eprivacy 인증서" /></a>
+				</div>
+				<!-- //인증마크 -->
+			</div>
+		</div>
+	</div>
+</div>
+<!--
+<script type="text/javascript" src="https://wcs.naver.net/wcslog.js"></script>
+<script type="text/javascript">
+	if(!wcs_add) var wcs_add = {}; wcs_add["wa"] = "211ae0bad54580"; wcs_do();
+</script>
+ -->
+	<!-- // 풋터 -->
+	<!-- SNS공유 팝업 -->
+	<div class="pops1 js-pop-sns dns">
+		<div class="pop-wrap">
+			<div class="heading">
+				<div class="inner">
+					<h2 class="tit">공유하기</h2>
+				</div>
+			</div>
+			<div class="cont">
+				<div class="inner">
+					<div class="group bbs2 pbs30">
+						<ul class="sns_wrap mts10">
+							<li>
+								<a href="#">
+									<img src="https://www.ffsb.kr/common/img/common/icon_facebook2.gif" alt="페이스북 공유하기">
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<img src="https://www.ffsb.kr/common/img/common/icon_twitter2.gif" alt="트위터 공유하기">
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<img src="https://www.ffsb.kr/common/img/common/icon_blog2.gif" alt="네이버블로그 공유하기">
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<img src="https://www.ffsb.kr/common/img/common/icon_band2.gif" alt="네이버밴드 공유하기">
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="mts20 acs">
+						<a class="btns a sz1 bc3 bolds js-close" style="width: 100px;" href="#">닫기</a>
+					</div>
+				</div>
+			</div>
+			<p class="close"><a href="#" class="js-close">닫기</a></p>
+		</div>
+	</div>
+	<!-- //SNS공유 팝업 -->
+</div>
+</body>
+</html>
